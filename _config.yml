@@ -1,0 +1,11 @@
+excerpt_separator: ""
+rouge: true
+markdown: kramdown
+url: http://devenv.pl
+name: DevEnv
+header: DevEnv
+description: "DevEnv"
+author: Adrian Piętka & Mateusz Książek
+avatar: 
+ga_domain: 
+ga_tracking_id: 
