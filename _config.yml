@@ -8,4 +8,11 @@ description: "DevEnv"
 author: Adrian Piętka & Mateusz Książek
 avatar: 
 ga_domain: 
-ga_tracking_id: 
+ga_tracking_id:
+authors:
+  apietka:
+    display_name: Adrian Piętka
+    github: adrianpietka
+  mksiazek:
+    display_name: Mateusz Książek
+    github: mejt
