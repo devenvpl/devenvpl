@@ -4,6 +4,7 @@ title: "Daj się poznać 2017 [Adrian]"
 layout: post
 description: "Parę słów na temat Daj Się Poznać i projektu AUDITOR"
 tags: apietka dsp2017-adrian
+category: dsp2017-adrian
 author: apietka
 ---
 

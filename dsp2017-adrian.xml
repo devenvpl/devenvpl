@@ -1,0 +1,29 @@
+---
+layout: null
+---
+
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.name }}</title>
+    <description>{{ site.description }}</description>
+    <link>{{ site.url }}</link>
+    <author>
+      <name>{{ site.author | xml_escape }}</name>
+    </author>
+    {% for post in site.posts %}
+        {% if page.category == 'dsp2017-adrian' %} 
+        <item>
+          <title>{{ post.title | xml_escape }}</title>
+          <description>{{ post.content | xml_escape  }}</description>
+          <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+          <author>
+            <name>{{ site.authors[post.author].display_name | xml_escape }}</name>
+          </author>
+          <link>{{ post.url | prepend: site.url }}</link>
+          <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
+        </item>
+        {% endif %}
+    {% endfor %}
+  </channel>
+</rss>
