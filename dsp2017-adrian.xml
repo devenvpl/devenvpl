@@ -12,7 +12,7 @@ layout: null
       <name>{{ site.author | xml_escape }}</name>
     </author>
     {% for post in site.posts %}
-        {% if page.category == 'dsp2017-adrian' %} 
+        {% if post.category == 'dsp2017-adrian' %} 
         <item>
           <title>{{ post.title | xml_escape }}</title>
           <description>{{ post.content | xml_escape  }}</description>
