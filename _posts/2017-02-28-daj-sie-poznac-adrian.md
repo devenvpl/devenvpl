@@ -1,24 +1,24 @@
 ---
 date: 2017-02-28T20:30:00CET
-title: "Daj siê poznaæ 2017 [Adrian]"
+title: "Daj siÄ™ poznaÄ‡ 2017 [Adrian]"
 layout: post
-description: "Parê s³ów na temat Daj Siê Poznaæ i projektu AUDITOR"
+description: "ParÄ™ sÅ‚Ã³w na temat Daj SiÄ™ PoznaÄ‡ i projektu AUDITOR"
 tags: apietka dsp2017-adrian
 author: apietka
 ---
 
-# Daj Siê Poznaæ - a co to jest?
+# Daj SiÄ™ PoznaÄ‡ - a co to jest?
 
-**Daj Siê Poznaæ 2017** to inicjatywa Macieja Anisierowicza znanego z m.in prowadzenia bloga [devstyle.pl](http://devstyle.pl). W tym roku postanowi³em spróbowaæ swoich si³ i przez 10 tygodni dostarczaæ nieco oprogramowania oraz opisywaæ swoje programistyczne dzia³ania w postaci postów.
+**Daj SiÄ™ PoznaÄ‡ 2017** to inicjatywa Macieja Anisierowicza znanego z m.in prowadzenia bloga [devstyle.pl](http://devstyle.pl). W tym roku postanowiÅ‚em sprÃ³bowaÄ‡ swoich siÅ‚ i przez 10 tygodni dostarczaÄ‡ nieco oprogramowania oraz opisywaÄ‡ swoje programistyczne dziaÅ‚ania w postaci postÃ³w.
 
-# Jaki projekt postaram siê realizowaæ?
+# Jaki projekt postaram siÄ™ realizowaÄ‡?
 
-Projekt w wersji roboczej nazwa³em **AUDITOR**. Ma on na celu u³atwienie procesu audytu kodu oprogramowania. Doœæ czêsto zdarza mi siê wykonywanie weryfikacji gotowych projektów, które potencjalnie mog¹ zostaæ przejête przez firmê w której pracujê. Aktualnie ten proces jest doœæ ¿mudny i wymaga ci¹g³ego prze³¹czania kontekstu pomiêdzy IDE, a Wordem. Czas to zmieniæ! Chcê aby po zakoñczeniu audytu kodu i pozostawieniu komentarzy w konkretnych plikach kodu Ÿród³owego mo¿na by³o wygenerowaæ plik (PDF, txt) zawieraj¹cy wszystkie uwagi wraz z fragmentami kodu. Dotychczas realizowane by³o to za pomoc¹ metody copy-paste do Worda.
+Projekt w wersji roboczej nazwaÅ‚em **AUDITOR**. Ma on na celu uÅ‚atwienie procesu audytu kodu oprogramowania. DoÅ›Ä‡ czÄ™sto zdarza mi siÄ™ wykonywanie weryfikacji gotowych projektÃ³w, ktÃ³re potencjalnie mogÄ… zostaÄ‡ przejÄ™te przez firmÄ™ w ktÃ³rej pracujÄ™. Aktualnie ten proces jest doÅ›Ä‡ Å¼mudny i wymaga ciÄ…gÅ‚ego przeÅ‚Ä…czania kontekstu pomiÄ™dzy IDE, a Wordem. Czas to zmieniÄ‡! ChcÄ™ aby po zakoÅ„czeniu audytu kodu i pozostawieniu komentarzy w konkretnych plikach kodu ÅºrÃ³dÅ‚owego moÅ¼na byÅ‚o wygenerowaÄ‡ plik (PDF, txt) zawierajÄ…cy wszystkie uwagi wraz z fragmentami kodu. Dotychczas realizowane byÅ‚o to za pomocÄ… metody copy-paste do Worda.
 
-Oczywiœcie to tylko jedna z czêœci przeprowadzanego audytu. Jednak na ten moment w.w za³o¿enia u³atwi¹ jedn¹ z naj¿mudniejszych czêœci.
+OczywiÅ›cie to tylko jedna z czÄ™Å›ci przeprowadzanego audytu. Jednak na ten moment w.w zaÅ‚oÅ¼enia uÅ‚atwiÄ… jednÄ… z najÅ¼mudniejszych czÄ™Å›ci.
 
-Kto wie, ale mo¿e po DSP2017 albo jeszcze w jego trakcie uda mi siê zintegrowaæ to narzêdzie z narzêdziami SCA dostarczaj¹c ca³kiem przyzwoity zacz¹tek raportu dostarczanego po audycie kodu Ÿród³owego? :)
+Kto wie, ale moÅ¼e po DSP2017 albo jeszcze w jego trakcie uda mi siÄ™ zintegrowaÄ‡ to narzÄ™dzie z narzÄ™dziami SCA dostarczajÄ…c caÅ‚kiem przyzwoity zaczÄ…tek raportu dostarczanego po audycie kodu ÅºrÃ³dÅ‚owego? :)
 
-# Gdzie masz ch³opie repozytorium?
+# Gdzie masz chÅ‚opie repozytorium?
 
-Repozytorium kodu bêdzie dostêpne tutaj: [github.com/devenvpl/auditor](https://github.com/devenvpl/auditor).
+Repozytorium kodu bÄ™dzie dostÄ™pne tutaj: [github.com/devenvpl/auditor](https://github.com/devenvpl/auditor).
