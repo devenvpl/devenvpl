@@ -1,27 +1,27 @@
 ---
+layout: null
 ---
 
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-  <title>{{ site.name }}</title>
-  <id>{{ site.url }}</id>
-  <link href="{{ site.url }}" />
-  <link href="{{ site.url }}/atom.xml" rel="self" />
-  <updated>{{ site.time | date_to_xmlschema }}</updated>
-  <rights>Copyright 2017, {{ site.author }}</rights>
-  <author>
-    <name>{{ site.author }}</name>
-  </author>
-  {% for post in site.posts %}
-    <entry>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>{{ site.name }}</title>
+    <description>{{ site.description }}</description>
+    <link>{{ site.url }}</link>
+    <author>
+      <name>{{ site.author | xml_escape }}</name>
+    </author>
+    {% for post in site.posts %}
+    <item>
       <title>{{ post.title | xml_escape }}</title>
-      <link href="{{ site.url }}{{ post.url }}" />
-      <summary type="html">{{ post.content | xml_escape }}</summary>
-      <id>{{ site.url }}{{ post.url }}</id>
-      <updated>{{ post.date | date_to_xmlschema }}</updated>
+      <description>{{ post.content | xml_escape  }}</description>
+      <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
       <author>
-        <name>{{ site.author }}</name>
+        <name>{{ site.authors[post.author].display_name | xml_escape }}</name>
       </author>
-    </entry>
-  {% endfor %}
-</feed>
+      <link>{{ post.url | prepend: site.url }}</link>
+      <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
+    </item>
+    {% endfor %}
+  </channel>
+</rss>

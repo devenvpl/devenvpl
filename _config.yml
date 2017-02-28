@@ -4,9 +4,8 @@ markdown: kramdown
 url: http://devenv.pl
 name: DevEnv
 header: DevEnv
-description: "DevEnv"
+description: "DevEnv - blog techniczny"
 author: Adrian Piętka & Mateusz Książek
-avatar: 
 ga_domain: 
 ga_tracking_id:
 authors:
@@ -16,3 +15,7 @@ authors:
   mksiazek:
     display_name: Mateusz Książek
     github: mejt
+gems:
+  - jekyll-feed
+feed:
+  path: atom.xml
