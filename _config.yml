@@ -17,6 +17,7 @@ authors:
     github: mejt
 gems:
   - jekyll-feed
+  - jekyll/tagging
 feed:
   path: atom.xml
 tag_page_layout: tag_page
