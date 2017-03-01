@@ -22,20 +22,20 @@ Nie ma. Będą jedynie z grubsza zdefiniowane wymagania funkcjonalne oraz troch�
 
 1. *AUDITOR* ma być aplikacją internetową, dostępną przez przeglądarkę internetową.
 2. Zarządzanie audytowanymi projektami
-    - Lista projektów składająca się z: nazwy projektu, postępu (np: zaudytowano 87% kodu, poświęcono 14h 39m)
-    - Użytkownik posiada możliwość dodawania nowego projektu
-    - Po utworzeniu projektu, można wgrać paczkę *zip* wraz z kodem źródłowym, który zostanie przypisany do projektu
+    * Lista projektów składająca się z: nazwy projektu, postępu (np: zaudytowano 87% kodu, poświęcono 14h 39m)
+    * Użytkownik posiada możliwość dodawania nowego projektu
+    * Po utworzeniu projektu, można wgrać paczkę *zip* wraz z kodem źródłowym, który zostanie przypisany do projektu
 3. Podgląd kodu źródłowego dla wybranego projektu
-    - Wyświetlenie struktury katalogowej w sposób ułatwiający poruszanie się pomiędzy poszczególnymi plikami z kodem źródłowym
-    - Szybkie wyszukiwanie konkretnego katalogu oraz pliku
-    - Kolorowanie składni kodu źródłowego podczas przeglądania zawartości pliku
-    - Możliwość komentowania jednej lub kilku zaznaczonych linii w kodzie źródłowym (od - do)
-    - Informacja o ilości zgłoszonych uwag w danym pliku oraz sumarycznie dla każdego węzła katalogów
-    - Logowanie czasu spędzonego na przeglądaniu kodu źródłowego, liczone dla każdego pliku z osobna
+    * Wyświetlenie struktury katalogowej w sposób ułatwiający poruszanie się pomiędzy poszczególnymi plikami z kodem źródłowym
+    * Szybkie wyszukiwanie konkretnego katalogu oraz pliku
+    * Kolorowanie składni kodu źródłowego podczas przeglądania zawartości pliku
+    * Możliwość komentowania jednej lub kilku zaznaczonych linii w kodzie źródłowym (od - do)
+    * Informacja o ilości zgłoszonych uwag w danym pliku oraz sumarycznie dla każdego węzła katalogów
+    * Logowanie czasu spędzonego na przeglądaniu kodu źródłowego, liczone dla każdego pliku z osobna
 4. Generowanie raportu na podstawie zgłoszonych komentarzy
-    - Raport zostanie wygenerowany w postaci pliku PDF
-    - Zawierać będzie informacje na temat: nazwy projektu, czasu poświęconego na audyt, procent zaudytowanego kodu
-    - Każdy fragment kodu źródłowego który został opatrzony komentarzem zostanie zaprezentowany w raporcie wraz z komentarzem
+    * Raport zostanie wygenerowany w postaci pliku PDF
+    * Zawierać będzie informacje na temat: nazwy projektu, czasu poświęconego na audyt, procent zaudytowanego kodu
+    * Każdy fragment kodu źródłowego który został opatrzony komentarzem zostanie zaprezentowany w raporcie wraz z komentarzem
 
 ## Wymagania niefunkcjonalne
 
@@ -57,7 +57,7 @@ O tym czym są wymagania niefunkcjonalne możesz przeczytać w artykule na stron
 
 ## Stack technologiczny
 
-W tej kwestii będę nieco monotonny, nudny i przygnębiający. **Nie będzie Reacta**. Nie i chuj. Po prostu, przy tym projekcie pominę hype na nieg. Chcę dostarczyć działający, w miarę ustrukturyzowany i ogarnięty kawałek oprogramowania. Reacta najzwyczajniej nie znam, a jego nieznajomość mogłaby spowolnić tempo prac.
+W tej kwestii będę nieco monotonny, nudny i przygnębiający. **Nie będzie Reacta**. Nie i chuj. Po prostu, przy tym projekcie pominę hype na niego. Chcę dostarczyć działający, w miarę ustrukturyzowany i ogarnięty kawałek oprogramowania. Reacta najzwyczajniej nie znam, a jego nieznajomość mogłaby spowolnić tempo prac.
 
 Backend zostanie zasilany przez **PHP** + **Symfony3**, przewinie się też kilka popularnych bibliotek. Dane wylądują *prawdopodobnie* w **MongoDB**. UI napędzi stary, poczciwy **AngularJS**. To w sumie tyle z podstawowego stacka. Po drodze na pewno zahaczę o parę popularnych słów kluczowych - jednak o tym później.
 
