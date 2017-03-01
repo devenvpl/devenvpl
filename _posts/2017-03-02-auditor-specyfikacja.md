@@ -1,6 +1,6 @@
 ---
 date: 2017-03-02 00:30
-title: "Auditor - Poka specke"
+title: "Auditor - Specyfikacja"
 layout: post
 description: "Sprecyzowanie wymagań dla projektu AUDITOR"
 tags: apietka dsp2017-adrian auditor
