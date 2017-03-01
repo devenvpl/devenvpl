@@ -8,9 +8,6 @@ layout: null
     <title>{{ site.name }}</title>
     <description>{{ site.description }}</description>
     <link>{{ site.url }}</link>
-    <author>
-      <name>{{ site.author | xml_escape }}</name>
-    </author>
     {{ content }}
   </channel>
 </rss>

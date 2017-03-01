@@ -12,9 +12,11 @@ authors:
   apietka:
     display_name: Adrian Piętka
     github: adrianpietka
+    email: adrian@pietka.me
   mksiazek:
     display_name: Mateusz Książek
     github: mejt
+    email: ksiazek.mate@gmail.com
 gems:
   - jekyll-feed
 feed:
