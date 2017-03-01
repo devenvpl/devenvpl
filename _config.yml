@@ -6,8 +6,8 @@ name: DevEnv
 header: DevEnv
 description: "DevEnv - blog techniczny"
 author: Adrian Piętka & Mateusz Książek
-ga_domain: 
-ga_tracking_id:
+ga_domain: auto
+ga_tracking_id: "UA-70075862-2"
 authors:
   apietka:
     display_name: Adrian Piętka
