@@ -1,8 +1,8 @@
 ---
-date: 2017-02-28T16:45:00CET
+date: 2017-02-28 23:30
 title: "Daj się poznać 2017 [Mateusz]"
 layout: post
-description: Zgłoszenie uczestnictwa w konkursie \"Daj się poznać 2017\"
+description: Zgłoszenie uczestnictwa w konkursie "Daj się poznać 2017"
 tags: mksiazek dsp2017-mateusz
 category: dsp2017-mateusz
 author: mksiazek
