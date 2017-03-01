@@ -4,6 +4,7 @@ title: "Daj się poznać 2017 [Mateusz]"
 layout: post
 description: Zgłoszenie uczestnictwa w konkursie \"Daj się poznać 2017\"
 tags: mksiazek dsp2017-mateusz
+category: dsp2017-mateusz
 author: mksiazek
 ---
 
