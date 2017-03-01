@@ -1,0 +1,18 @@
+---
+layout: default_feed
+---
+
+{% for post in site.posts %}
+    {% if post.category == page.category %}
+    <item>
+      <title>{{ post.title | xml_escape }}</title>
+      <description>{{ post.content | xml_escape  }}</description>
+      <pubDate>{{ post.date | date_to_xmlschema }}</pubDate>
+      <author>
+        <name>{{ site.authors[post.author].display_name | xml_escape }}</name>
+      </author>
+      <link>{{ post.url | prepend: site.url }}</link>
+      <guid isPermaLink="true">{{ post.url | prepend: site.url }}</guid>
+    </item>
+    {% endif %}
+{% endfor %}
