@@ -20,19 +20,18 @@ Nie ma. Będą jedynie z grubsza zdefiniowane wymagania funkcjonalne oraz troch�
 > 
 > *via wikipedia.org*
 
-1. *AUDITOR* ma być aplikacją internetową, dostępną przez przeglądarkę internetową.
-2. Zarządzanie audytowanymi projektami
+1. Zarządzanie audytowanymi projektami
     * Lista projektów składająca się z: nazwy projektu, postępu (np: zaudytowano 87% kodu, poświęcono 14h 39m)
     * Użytkownik posiada możliwość dodawania nowego projektu
-    * Po utworzeniu projektu, można wgrać paczkę *zip* wraz z kodem źródłowym, który zostanie przypisany do projektu
-3. Podgląd kodu źródłowego dla wybranego projektu
+    * Po utworzeniu projektu, można wgrać paczkę *zip* wraz z kodem źródłowym, który zostanie przypisany do projektu
+2. Podgląd kodu źródłowego dla wybranego projektu
     * Wyświetlenie struktury katalogowej w sposób ułatwiający poruszanie się pomiędzy poszczególnymi plikami z kodem źródłowym
     * Szybkie wyszukiwanie konkretnego katalogu oraz pliku
     * Kolorowanie składni kodu źródłowego podczas przeglądania zawartości pliku
     * Możliwość komentowania jednej lub kilku zaznaczonych linii w kodzie źródłowym (od - do)
     * Informacja o ilości zgłoszonych uwag w danym pliku oraz sumarycznie dla każdego węzła katalogów
-    * Logowanie czasu spędzonego na przeglądaniu kodu źródłowego, liczone dla każdego pliku z osobna
-4. Generowanie raportu na podstawie zgłoszonych komentarzy
+    * Logowanie czasu spędzonego na przeglądaniu kodu źródłowego, liczone dla każdego pliku z osobna
+3. Generowanie raportu na podstawie zgłoszonych komentarzy
     * Raport zostanie wygenerowany w postaci pliku PDF
     * Zawierać będzie informacje na temat: nazwy projektu, czasu poświęconego na audyt, procent zaudytowanego kodu
     * Każdy fragment kodu źródłowego który został opatrzony komentarzem zostanie zaprezentowany w raporcie wraz z komentarzem
