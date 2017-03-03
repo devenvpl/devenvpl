@@ -14,9 +14,14 @@
     vertical-align: baseline;
     border-radius: .25em;
     background-color: #39f;
+    margin: 12px 0;
 }
 
 .tag a {
     text-decoration: none;
     color: #FFF;
+}
+
+hr {
+    border-top: 1px dashed rgba(0, 0, 0, 0.3);
 }
