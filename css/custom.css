@@ -25,3 +25,11 @@
 hr {
     border-top: 1px dashed rgba(0, 0, 0, 0.3);
 }
+
+.page-header {
+    margin: 10px;
+}
+
+.page-header .color {
+    color: #39f;
+}

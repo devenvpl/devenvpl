@@ -1,0 +1,28 @@
+---
+layout: default
+title: Strona główna
+---
+
+<div id="home">
+  <h2 class="page-header">
+    Kategoria: <span class="color">{{ page.category }}</span>,
+    liczba postów: <span class="color">{{ site.categories[page.category] | size }}</span>
+  </h2>
+  <ul class="posts">
+    {% for post in site.posts %}
+      {% if post.category == page.category %}
+        <li itemscope itemtype="http://schema.org/BlogPosting">
+          <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">
+            <div class="p-wrap">
+              <time datetime="{{ post.date | date_to_xmlschema }}" class="date"
+                  itemprop="datePublished">
+                {{ post.date | date: "%Y-%m-%d" }}
+              </time>
+              <p itemprop="name headline">{{ post.title }}</p>
+            </div>
+          </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+</div>
