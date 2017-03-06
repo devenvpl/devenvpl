@@ -18,7 +18,7 @@ O samej implementacji, rozpiszę się w dwóch zupełnie niezależnych artykuła
 
 ### Frontend - WebUI
 
-AngularJS jak wszystko, ma swoje wady i zalety. Jedną z wad jest zdecydowanie bardzo ubogi routing. Dlatego też, od początku będę używał rozbudowanej wersji, upsrawniającej routing aplikacji - [AngularUI Router](https://github.com/angular-ui/ui-router). W utrzymaniu *Clean Code* pomogą mi reguły spisane przez John Papa, choć będzie to raczje wybór kilku z nich, niżeli próba implementacji każdej. Możesz o nich poczytać tutaj - [Angular 1 Style Guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md).
+AngularJS jak wszystko, ma swoje wady i zalety. Jedną z wad jest zdecydowanie bardzo ubogi routing. Dlatego też, od początku będę używał rozbudowanej wersji, usprawniającej routing aplikacji - [AngularUI Router](https://github.com/angular-ui/ui-router). W utrzymaniu *Clean Code* pomogą mi reguły zaproponowane przez John Papa, choć będzie to raczje wybór kilku z nich, niżeli próba implementacji każdej. Możesz o nich poczytać tutaj - [Angular 1 Style Guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md).
 
 ## Wymagania
 
