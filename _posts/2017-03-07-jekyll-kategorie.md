@@ -1,5 +1,5 @@
 ---
-date: 2017-03-07 21:40
+date: 2017-03-07 23:20
 title: "Pierwsze zetknięcie z Jekyll. Podział na kategorie"
 layout: post
 description: Krótki opis "pierwszych chwil" z Jekyllem oraz mały tutorial jak zorganizować strony z kategoriami
