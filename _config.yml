@@ -25,3 +25,8 @@ timezone: Europe/Warsaw
 collections:
   categories:
     output: true
+kramdown:
+  syntax_highlighter_opts:
+    block:
+      line_numbers: true
+      start_line: 1

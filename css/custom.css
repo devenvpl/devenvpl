@@ -39,3 +39,7 @@ hr {
     padding: 10px;
     overflow: auto;
 }
+
+.lineno {
+    margin-right: 12px;
+}
