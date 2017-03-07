@@ -33,3 +33,13 @@ hr {
 .page-header .color {
     color: #39f;
 }
+
+.highlight {
+    margin: 0 40px 40px;
+    padding: 10px;
+    overflow: auto;
+}
+
+.lineno {
+    margin-right: 12px;
+}
