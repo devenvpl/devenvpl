@@ -24,27 +24,34 @@ AngularJS jak wszystko, ma swoje wady i zalety. Jedną z wad jest zdecydowanie b
 
 Co jednak jest niezbędne aby uruchomić aplikację? Aktualnie po stronie backendowej, wymagany jest interpreter PHP w wersji 7.1 oraz PHPowy dependency manager - [composer](https://getcomposer.org/). That's all.
 
-Aplikacja frontendowa jest nieco bardziej wymagająca. Należy zainstalować [Node.js](https://nodejs.org) wraz z managerem pakietów *npm*. Następnie doinstalować globalnie task runnera - [grunt](https://gruntjs.com/). Najlepiej wszystko w najnowszej, stabilnej wersji.
+Aplikacja frontendowa jest nieco bardziej wymagająca. Należy zainstalować [Node.js](https://nodejs.org) wraz z managerem pakietów *npm*. Następnie doinstalować globalnie task runnera - [gulp.js](http://gulpjs.com/) oraz bundlera [browserify](http://browserify.org/). Najlepiej wszystko w najnowszej, stabilnej wersji.
+
+```
+$: npm install gulp -g
+$: npm install browserify -g
+```
+
+Uff... Na początek to tyle. Tworzenie frontendu staje się coraz bardziej wymagające pod kątem stosowanych narzędzi ;-)
 
 ## Uruchomienie
 
-Jeżeli jesteśmy pewni, że wszystkie niezbędne elementy układanki zostały zainstalowane, pozostaje nam ściągnięcie repozytorium kodu.
+Jeżeli jesteśmy pewni, że wszystkie niezbędne elementy układanki zostały zainstalowane, pozostaje nam ściągnięcie repozytorium kodu i uruchomienie aplikacji.
 
 ```
 $: git clone git@github.com:devenvpl/auditor.git
 $: cd auditor
 ```
 
-Uruchomienie backendu, jest banalnie proste.
+Uruchomienie backendu, jest banalnie proste. Composer pobiera niezbędne zależności, a następnie wykorzystując wbudowany serwer HTTP w interpreterze PHP, uruchamiana jest aplikacja.
 
 ```
 $: cd api && composer install && php bin/console server:run
 ```
 
-Pozostaje jedynie uruchomić aplikację frontendową.
+Start aplikacji frontendowej, wygląda bardzo podobnie. Npm instaluje wszystkie potrzebne biblioteki, gulp przygotowuje pliki (m.in konkatenacja bibliotek), a następnie zaczynamy serwować pliki statyczne.
 
 ```
-$: cd webui && npm install && grunt build && grunt server
+$: cd webui && npm install && gulp dist && gulp serve
 ```
 
 Od tej pory dwa elementy aplikacji dostępne są pod adresami:
