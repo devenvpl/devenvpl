@@ -6,6 +6,7 @@ description: "Sprecyzowanie wymagań dla projektu AUDITOR"
 tags: apietka dsp2017-adrian auditor
 category: dsp2017-adrian
 author: apietka
+comments: true
 ---
 
 Czas nakreślić nieco bardziej szczegółowe ramy projektu *AUDITOR*. Jeżeli jeszcze nie wiesz czym jest projekt oraz jaki problem ma potencjalnie rozwiązać, to zapraszam Cię do pierwszego postu z serii: [Daj się poznać 2017 [Adrian]](/dsp2017-adrian/2017/02/28/daj-sie-poznac-adrian.html).

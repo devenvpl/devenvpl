@@ -6,6 +6,7 @@ description: Relacja z tegorocznej edycji konferencji "Boiling Frogs"
 tags: mksiazek dsp2017-mateusz konferencja
 category: dsp2017-mateusz
 author: mksiazek
+comments: true
 ---
 
 ![Boiling Frogs logo]({{ site.url }}/assets/images/2017/03/boiling-frogs/main.jpg)

@@ -6,7 +6,9 @@ description: Krótki opis "pierwszych chwil" z Jekyllem oraz mały tutorial jak 
 tags: mksiazek dsp2017-mateusz jekyll
 category: dsp2017-mateusz
 author: mksiazek
+comments: true
 ---
+
 Nasz blog *devenv* hostowany jest na [github pages](https://pages.github.com/) z wykorzystaniem narzędzia 
 [jekyll](https://jekyllrb.com/). Jeszcze 3 tygodnie temu *github pages* kojarzyły mi się tylko jako statyczne stronki HTML,
 jednak kiedy postanowiliśmy uruchomić bloga i zastanawialiśmy się czy ma to być kolejna strona oparta o *WordPressa*,
