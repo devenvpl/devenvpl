@@ -6,17 +6,18 @@ description: "Struktura projektu wraz z podstawową konfiguracją"
 tags: apietka dsp2017-adrian auditor
 category: dsp2017-adrian
 author: apietka
+comments: true
 ---
 
 Postanowiłem rozdzielić interfejs użytkownika od części backendowej. Dlatego też, będę tworzył aplikację składającą się z dwóch elementów - *backend* oraz *frontend*. Pamiętaj, że tworzę aplikację typu **SPA** (*Single-page application*).
 
-### Backend - API
+## Backend - API
 
 Aplikację backendową napędza framework **Symfony 3**, wykorzystujący wzorzec architektoniczny **MVC** (*Model-View-Controller*). Będzie to swoiste API dla aplikacji frontendowej. Całość oparta o zasadę (en. *priniciple*) - **CQRS** (*Command Query Responsibility Segregation*). Czyli w wielkim skrócie mówiąc - rozdzielam model zapisu od odczytu, a wszystko co dzieje się w aplikacji może być przyporządkowane do jednego rodzaju akcji - odczytu (*Query*) lub zapisu (*Command*).
 
 O samej implementacji, rozpiszę się w dwóch zupełnie niezależnych artykułach. Jednak będzie to omówienie implementacji w języku PHP. Na teraz polecam z zapoznaniem się z ebookiem Maćka z [devstyle.pl](http://devstyle.pl/) - [CQRS Pragmatycznie](http://devstyle.pl/ksiazki/cqrs-pragmatycznie/).
 
-### Frontend - WebUI
+## Frontend - WebUI
 
 AngularJS jak wszystko, ma swoje wady i zalety. Jedną z wad jest zdecydowanie bardzo ubogi routing. Dlatego też, od początku będę używał rozbudowanej wersji, usprawniającej routing aplikacji - [AngularUI Router](https://github.com/angular-ui/ui-router). W utrzymaniu *Clean Code* pomogą mi reguły zaproponowane przez John Papa, choć będzie to raczje wybór kilku z nich, niżeli próba implementacji każdej. Możesz o nich poczytać tutaj - [Angular 1 Style Guide](https://github.com/johnpapa/angular-styleguide/blob/master/a1/README.md).
 
