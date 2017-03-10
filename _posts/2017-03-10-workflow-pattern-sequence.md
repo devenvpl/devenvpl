@@ -24,7 +24,9 @@ Modelując niedawno jedną z funkcji aplikacji, spotkałem się ponownie z podob
 Najpierw zdefiniowałem *context*, czyli obiekt który będzie współdzielony pomiędzy poszczególnymi akcjami. Taki "pojemnik" na dane. Dla przykładu, mój *context* będzie zawierał tylko jedną właściwość.
 
 
-```php
+~~~ php
+<?php
+
 class WorkflowContext
 {
     private $sequenceId;
@@ -39,20 +41,24 @@ class WorkflowContext
         $this->sequenceId = $sequenceId;
     }
 }
-```
+~~~
 
 Każda akcja będzie implementować następujący interfejs:
 
-```php
+~~~ php
+<?php
+
 interface WorkflowAction
 {
     public function execute(WorkflowContext $context);
 }
-```
+~~~
 
 Szkielet implementacji trzech niemal identycznych akcji:
 
-```php
+~~~ php
+<?php
+
 class FirstWorkflowAction implements WorkflowAction
 {
     public function execute(WorkflowContext $context)
@@ -80,21 +86,23 @@ class ThirdWorkflowAction implements WorkflowAction
         return null;
     }
 }
-```
+~~~
 
 Każde wykonanie akcji, czyli wywołanie metody *execute* zwraca nam instancję obiektu kolejnej do wykonania akcji (za wyjątkiem ostatniej akcji w procesie - ona zwraca wartość *null*).
 Implementacja poszczególnych akcji może zostać oddelegowana do zupełnie innego miejsca - nowej klasy. W ten sposób wszystko co implementuje *WorkflowAction* może być tylko opakowaniem na sekwencyjny proces, bez implementacji konkretnej logiki.
 
 Pozostaje jedynie uruchomienie *workflow*:
 
-```php
+~~~ php
+<?php
+
 $context = new WorkflowContext();
 $action = new FirstWorkflowAction();
 
 while ($action) {
     $action = $action->execute($context);
 }
-```
+~~~
 
 Tworzę instancję *WorkflowContext*, ustawiam pierwszą akcję do wykonania *FirstWorkflowAction*. Następnie wykorzystując pętlę *while*  wywoływana jest metoda *execute* (na kolejnych akcjach), tak długo aż otrzymamy wartość niespełniającą warunku pętli. W tym przypadku jest to wartość *null*, która zwracana jest przez ostatnią akcję procesu.
 
