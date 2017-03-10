@@ -18,7 +18,7 @@ layout: default
         <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
           {{ page.date | date: "%Y-%m-%d" }}
         </time>
-        {{ if page.category }}
+        {% if page.category %}
             , w: <a href="{{ site.baseurl }}/{{page.category}}.html">page.category</a>
         {% endif %}
       </h5>
