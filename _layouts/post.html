@@ -19,7 +19,7 @@ layout: default
           {{ page.date | date: "%Y-%m-%d" }}
         </time>
         {% if page.category %}
-            , w: <a href="{{ site.baseurl }}/{{page.category}}.html">page.category</a>
+            , w: <a href="{{ site.baseurl }}/{{page.category}}.html">{{page.category}}</a>
         {% endif %}
       </h5>
     </div>
