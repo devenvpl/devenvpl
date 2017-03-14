@@ -40,6 +40,10 @@ hr {
     overflow: auto;
 }
 
+.highlight .err {
+    background-color: transparent;
+}
+
 .lineno {
     margin-right: 12px;
 }
