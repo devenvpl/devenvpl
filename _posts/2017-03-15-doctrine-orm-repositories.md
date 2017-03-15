@@ -23,9 +23,11 @@ Doctrine\Common\Collections\Selectable
 
 Przykład utworzenia repozytorium na podstawie UserEntity:
 
-```php
+~~~~php
+<?php
+
 $userRepository = $entityManager->getRepository(UserEntity::class);
-```
+~~~~
 
 Autorzy Doctrine ORM zaimplementowali nieco więcej metod niż te wymuszone w.w interfejsami. Wśród nich znajduje się jednak prawdziwa perełka - metoda magiczna ```__call()```. Dzięki niej, otrzymujemy możliwość używania niezdefiniowanego nigdzie interfejsu - chyba, że mamy na myśli schemat tabeli w bazie danych (ilość udostępnionych *metod* = ilość kolumn w tabeli bazodanowej * 2).
 Konkretniej, implementacja umożliwia nam wywoływanie nieistniejących metody w oparciu o schemat: ```findOneBy[ColumnName]``` oraz ```findBy[ColumnName]```. Rozwiązanie wydaje się bardzo atrakcyjne dla programisty, "od tak" otrzymujemy możliwość wyszukiwania encji po wskazanym kryterium.
@@ -34,7 +36,9 @@ Okazuje się jednak, że z początkowych publicznych metod, których doliczyłem
 
 Często spotykam się z mniej więcej takimi rozwiązaniami:
 
-```php
+~~~~php
+<?php
+
 namespace Services;
 
 use Exception\DuplicatedUserEmailException;
@@ -61,15 +65,17 @@ class CreateNewUserService
         $this->userRepository->add(new UserEntity($email));
     }
 }
-```
+~~~~
 
-```php
+~~~~php
+<?php
+
 $entityManager = \Doctrine\ORM\EntityManager::create();
 $userRepository = $entityManager->getRepository(\Entity\UserEntity::class);
 $createNewUserService = new \Services\CreateNewUserService($userRepository);
 
 $createNewUserService->create('unikalnyadres@pocztaemail.com');
-```
+~~~~
 
 Wykorzystana w przykładzie metoda ```findByAddessEmail()``` jest wynikiem w.w magii Doctrina. Dodatkowo jesteśmy zależnieni od zewnętrznego interfejsu ```Doctrine\ORM\EntityRepository``` z niewiadomą ilością wywołań (w naszym kodzie) niezdefiniowanych metod interfejsu. Próba podmiany implementacji repozytorium, to po prostu walka z kodem po omacku.
 
@@ -98,7 +104,9 @@ Folder ```Repository/Doctrine``` zawiera konkretną już implementację interfej
 
 Rzućmy okiem na definicję interfejsu ```UserRepositoryInterface```:
 
-```php
+~~~~php
+<?php
+
 namespace Repository;
 
 interface UserRepositoryInterface
@@ -106,13 +114,15 @@ interface UserRepositoryInterface
     public function getByAddessEmail(string $email) : UserEntity;
     public function add(UserEntity $userEntity) : UserEntity;
 }
-```
+~~~~
 
 W dalszej części naszej aplikacji możemy jawnie wskazać którtego repozytorium oczekujemy - w tym wypadku należy pamiętać o "design by contract", więc oczekujemy *interfejsu repozytorium*, a nie jego implementacji.
 
 Przykładowa implementacja:
 
-```php
+~~~~php
+<?php
+
 namespace Repository\Doctrine;
 
 use Entity\UserEntity;
@@ -142,12 +152,14 @@ class UserRepository implement UserRepositoryInterface
         return $user;
     }
 }
-```
+~~~~
 
 Następnie ```CreateNewUserService``` ulegnie drobnym modyfikacją:
 
 
-```php
+~~~~php
+<?php
+
 namespace Services;
 
 use Exception\DuplicatedUserEmailException;
@@ -173,17 +185,19 @@ class CreateNewUserService
         $this->userRepository->add(new UserEntity($email));
     }
 }
-```
+~~~~
 
 Wywołanie też wymaga nieco odmiennej definicji:
 
-```php
+~~~~php
+<?php
+
 $entityManager = \Doctrine\ORM\EntityManager::create();
 $userRepository = new \Repository\Doctrine\UserRepository($entityManager);
 $createNewUserService = new \Services\CreateNewUserService($userRepository);
 
 $createNewUserService->create('unikalnyadres@pocztaemail.com');
-```
+~~~~
 
 Zmiany widoczne w kodzie są kosmetyczne, jednak takie podejście umożliwia nam łatwą podmianę repozytorium. Jawnie zdefiniowany interfejs informuje nas o metodach które faktycznie wykorzystywane są w aplikacji. 
 
