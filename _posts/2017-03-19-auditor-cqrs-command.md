@@ -1,5 +1,5 @@
 ---
-date: 2017-03-06 22:30
+date: 2017-03-19 19:00
 title: "Auditor - CQRS - Command"
 layout: post
 description: "Wstęp do implementacji CQRS - Command"
