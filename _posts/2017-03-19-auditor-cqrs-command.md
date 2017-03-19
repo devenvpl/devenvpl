@@ -198,4 +198,4 @@ class ProjectsController extends AppController
 }
 ~~~
 
-Pełne rozwiązanie można podejrzeć w projekcie *Auditor*. Jego kod źródłowy dostępny jest w serwisie GitHub: github.com/devenvpl/auditor](https://github.com/devenvpl/auditor)
+Pełne rozwiązanie można podejrzeć w projekcie *Auditor*. Jego kod źródłowy dostępny jest w serwisie GitHub: [github.com/devenvpl/auditor](https://github.com/devenvpl/auditor)
