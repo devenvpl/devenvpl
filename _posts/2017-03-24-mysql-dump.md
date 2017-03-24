@@ -1,5 +1,5 @@
 ---
-date: 2017-03-23 20:00
+date: 2017-03-24 22:30
 title: "MySQL - Dump"
 layout: post
 description: "Tworzenie i przywracanie zrzutu bazy danych MySQL."
