@@ -34,11 +34,11 @@ AuditorBundle posiada referencje do modułu *CqrsBundle*.
 
 # CqrsBundle
 
-To najbardziej uniwersalny *moduł*. Nie jest w żaden sposób skojarzonuy
+To najbardziej uniwersalny *moduł*. Nie jest w żaden sposób skojarzony z resztą *bundle*.
 
 - Commanding - definicja interfejsów oraz podstawowych klas wspierająca wykonywanie żądań w systemie,
 - Eventing - obsługa zdarzeń wywoływanych po żądaniach przesłanych do systemu, ich definicja wraz z właściwościami,
-- Exception - generyczne zdarzenia wyjątkowe, np. brak obsługi wywoływanego żądania (*CommandHandler*)
+- Exception - generyczne zdarzenia wyjątkowe, np. brak obsługi wywoływanego żądania (*CommandHandler*).
 CqrsBundle nie posiada referencji do żadnych modułów. Jedynie do podstawowych bibliotek PHP 7.x.
 
 # Dlaczego?
