@@ -1,5 +1,5 @@
 ---
-date: 2017-03-25 22:00
+date: 2017-03-26 22:00
 title: "Auditor - Bundles"
 layout: post
 description: "Podział projektu Auditor na Symfonowe bundle"
