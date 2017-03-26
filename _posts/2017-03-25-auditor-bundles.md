@@ -2,48 +2,48 @@
 date: 2017-03-25 22:00
 title: "Auditor - Bundles"
 layout: post
-description: "Podzia³ projektu Auditor na Symfonowe bundle"
+description: "PodziaÅ‚ projektu Auditor na Symfonowe bundle"
 tags: apietka dsp2017-adrian auditor symfony bundle
 category: dsp2017-adrian
 author: apietka
 comments: true
 ---
 
-W mojej przygodzie programistycznej wspiera³em zespo³y projektowe w tworzeniu aplikacji w oparciu o ró¿ne platformy, a co za tym idzie równie¿ ró¿ne jêzyki programowania i frameworki. W projektach .NET bardzo podoba mi siê uk³adanie struktury solucji. Dowolnoœæ w tworzeniu podfolderów, podzia³ na projekty. W ekosystemie Symfony mamy tzw. podzia³ na Bundle. Jest on co prawda doœæ restrykcyjnie opisany w dokumentacji - "modu³y które mo¿na reu¿ywaæ pomiêdzy projektami". Moje rowziw¹zanie troszkê przeczy tej g³ównej zasadzie, ale mam ku temu pewne argumenty. O tym jednak za moment, najpierw rzuæcie okiem na to jak wygl¹da struktura projektu.
+W mojej przygodzie programistycznej wspieraÅ‚em zespoÅ‚y projektowe w tworzeniu aplikacji w oparciu o rÃ³Å¼ne platformy, a co za tym idzie rÃ³wnieÅ¼ rÃ³Å¼ne jÄ™zyki programowania i frameworki. W projektach .NET bardzo podoba mi siÄ™ ukÅ‚adanie struktury solucji. DowolnoÅ›Ä‡ w tworzeniu podfolderÃ³w, podziaÅ‚ na projekty. W ekosystemie Symfony mamy tzw. podziaÅ‚ na Bundle. Jest on co prawda doÅ›Ä‡ restrykcyjnie opisany w dokumentacji - "moduÅ‚y ktÃ³re moÅ¼na reuÅ¼ywaÄ‡ pomiÄ™dzy projektami". Moje rowziwÄ…zanie troszkÄ™ przeczy tej gÅ‚Ã³wnej zasadzie, ale mam ku temu pewne argumenty. O tym jednak za moment, najpierw rzuÄ‡cie okiem na to jak wyglÄ…da struktura projektu.
 
 # AppBundle
 
-AppBundle to g³ówny modu³ - zawieraj¹cy dostêpne endpointy (kontrolery) oraz implementacje niezbêdnych interfejsów.
+AppBundle to gÅ‚Ã³wny moduÅ‚ - zawierajÄ…cy dostÄ™pne endpointy (kontrolery) oraz implementacje niezbÄ™dnych interfejsÃ³w.
 
-- Controller - definicja kontrolerów - czyli adresów URL dostêpnych dla aplikacji frontendowej,
-- EventListener	- implementacja zwi¹zana z przechwytywaniem zdarzeñ, w przypadku aplikacji *Auditor* - funkcjonalnoœci wykonywanych po akcjach zdefiniowanych w ¿adaniach - *Commands*,
+- Controller - definicja kontrolerÃ³w - czyli adresÃ³w URL dostÄ™pnych dla aplikacji frontendowej,
+- EventListener	- implementacja zwiÄ…zana z przechwytywaniem zdarzeÅ„, w przypadku aplikacji *Auditor* - funkcjonalnoÅ›ci wykonywanych po akcjach zdefiniowanych w Å¼adaniach - *Commands*,
 - Repository - implementacja repozytorium w oparciu o ORM *Doctrine*.
 
-AppBudle posiada referencje do wszystkich pozosta³ych modu³ów - spina je do *kupy* :)
+AppBudle posiada referencje do wszystkich pozostaÅ‚ych moduÅ‚Ã³w - spina je do *kupy* :)
 
 # AuditorBundle
 
-To mo¿liwie najbardziej abstrakcyjny byt. Wszelka implementacja podlega zasadzie *Design by Contract* (poza zaleznoœci¹ od CqrsBundle). Wszystkie zewnêtrzne zale¿noœci wykorzystuj¹ interfejsy. Po to by dostarczyæ w fazie implementacji odpowiedni¹ klasê.
+To moÅ¼liwie najbardziej abstrakcyjny byt. Wszelka implementacja podlega zasadzie *Design by Contract* (poza zaleznoÅ›ciÄ… od CqrsBundle). Wszystkie zewnÄ™trzne zaleÅ¼noÅ›ci wykorzystujÄ… interfejsy. Po to by dostarczyÄ‡ w fazie implementacji odpowiedniÄ… klasÄ™.
 
-- Command - ¿adania, akcje zmieniaj¹ce stan systemu (struktura danych oraz obs³uga ¿¹dania - je¿eli korzysta z zewnêtrznych serwisów, korzysta z zdefiniowanych interfejsów),
-- Entity - "pseudo" domain obejcts, w faktycznym stanie s¹ to encje dostarczone za pomoc¹ *ORM Doctrine*, przechowuj¹ dane, umo¿liwiaj¹ ustawianie oraz odczytywanie danych,
-- Event - definicja zdarzenia - co siê sta³o (nazwa klasy), jakie informacje nale¿y przekazajæ (w³aœciwoœci klasy),
-- Repository - interfejsy dostêpu do repozytorium, implementowane w *AppBudle*.
+- Command - Å¼adania, akcje zmieniajÄ…ce stan systemu (struktura danych oraz obsÅ‚uga Å¼Ä…dania - jeÅ¼eli korzysta z zewnÄ™trznych serwisÃ³w, korzysta z zdefiniowanych interfejsÃ³w),
+- Entity - "pseudo" domain obejcts, w faktycznym stanie sÄ… to encje dostarczone za pomocÄ… *ORM Doctrine*, przechowujÄ… dane, umoÅ¼liwiajÄ… ustawianie oraz odczytywanie danych,
+- Event - definicja zdarzenia - co siÄ™ staÅ‚o (nazwa klasy), jakie informacje naleÅ¼y przekazajÄ‡ (wÅ‚aÅ›ciwoÅ›ci klasy),
+- Repository - interfejsy dostÄ™pu do repozytorium, implementowane w *AppBudle*.
 
-AuditorBundle posiada referencje do modu³u *CqrsBundle*.
+AuditorBundle posiada referencje do moduÅ‚u *CqrsBundle*.
 
 # CqrsBundle
 
-To najbardziej uniwersalny *modu³*. Nie jest w ¿aden sposób skojarzonuy
+To najbardziej uniwersalny *moduÅ‚*. Nie jest w Å¼aden sposÃ³b skojarzonuy
 
-- Commanding - 
+- Commanding - definicja interfejsÃ³w oraz podstawowych klas wspierajÄ…ca wykonywanie Å¼Ä…daÅ„ w systemie,
 - Eventing -
 - Exception -
 
-CqrsBundle nie posiada referencji do ¿adnych modu³ów. Jedynie do podstawowych bibliotek PHP 7.x.
+CqrsBundle nie posiada referencji do Å¼adnych moduÅ‚Ã³w. Jedynie do podstawowych bibliotek PHP 7.x.
 
 # Dlaczego?
 
-Mam jasny podzia³ pomiêdzy kontraktem (zdefiniowanym w AuditorBundle), a jego implementacj¹ (czyli implementacj¹ interfejsów w AppBundle). Je¿eli bêdê chcia³ oprzeæ projekt o zupe³nie inny *model write* - wystarczy, ¿e podmieniê definicjê w konfiguracji DIC oraz dodam brakuj¹ce implementacje adapterów (dla *Repository*). Definicja  z zasad SOLID zostaje spe³niona - Open/Closed Principle.
+Mam jasny podziaÅ‚ pomiÄ™dzy kontraktem (zdefiniowanym w AuditorBundle), a jego implementacjÄ… (czyli implementacjÄ… interfejsÃ³w w AppBundle). JeÅ¼eli bÄ™dÄ™ chciaÅ‚ oprzeÄ‡ projekt o zupeÅ‚nie inny *model write* - wystarczy, Å¼e podmieniÄ™ definicjÄ™ w konfiguracji DIC oraz dodam brakujÄ…ce implementacje adapterÃ³w (dla *Repository*). Definicja  z zasad SOLID zostaje speÅ‚niona - Open/Closed Principle.
 
-Reu¿ywalnoœæ (CqrsBundle), podmiana (implementacja interfejsów z AuditorBundle) - ¿yæ i nie umieraæ :)
+ReuÅ¼ywalnoÅ›Ä‡ (CqrsBundle), podmiana (implementacja interfejsÃ³w z AuditorBundle) - Å¼yÄ‡ i nie umieraÄ‡ :)
