@@ -13,9 +13,9 @@ comments: true
 
 W najbliższy poniedziałek (03.04) odbędzie się kolejna konferencja [4developers](http://2017.4developers.org.pl). 
 Osobiście jeszcze nigdy nie byłem na tej konferencji, więc w tym roku postanowiłem to zmienić i zamówiłem bilet kiedy
-jeszcze był w statusie Early Bird.
+od razu kiedy pojawiły się w sprzedaży.
 
-Ilość ścieżek i prezentacji jest ogromna więc nie chcąc popełnić błędu z konferencji Boling Frogs, o którym pisałem
+Ilość ścieżek i prezentacji jest ogromna więc nie chcąc popełnić błędu z konferencji Boiling Frogs, o którym pisałem
 w mojej [relacji](/dsp2017-mateusz/2017/03/01/boiling-frogs.html) związanym ze złym doborem prelekcji postanowiłem
 już teraz przeanalizować i dobrać "moją agendę".
 
@@ -33,6 +33,6 @@ co najmniej na dwa dni ;-)
 * **18:00 - 18:45** [Messaging Queues](http://2017.4developers.org.pl/pl/program/lectures/messaging-queues/)
 
 Bardzo trudne zadanie... W wiekszości wypadków interesowały mnie tematy z trzech różnych ścieżek o tej samej godzinie...
-Musiałem wybrać jakiś klucz, który pozwolił mi dojść do wysyelekcjonowania odpowiedni tematów. Kierowałem się po prostu
+Musiałem wybrać jakiś klucz, który pozwolił mi dojść do wyselekcjonowania odpowiedni prezentacji. Kierowałem się po prostu
 tym co może mi się przydać w najbliższym czasie w mojej pracy. Niestety inne tematy musiałem odłożyć na później. Mam
 nadzieję, że na konferencji prelekcje będa nagrywane i dostępne do obejrzenia w późniejszym czasie.
