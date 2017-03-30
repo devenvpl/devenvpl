@@ -11,7 +11,7 @@ comments: true
 
 *Read Model* w projekcie *Auditor* wykorzystuje bibliotekę [Doctrine DBAL](http://www.doctrine-project.org/projects/dbal.html). Umożliwia ona połączenie z bazą danych (w przypadku tego projektu - *MySQL*) oraz wykonywanie zapytań SQL.
 
-Pomijam tutaj warstwę *Repository*, *Entity* - ona ma swoje zastosowanie w żądaniach - [Command](/dsp2017-adrian/2017/03/19/auditor-cqrs-command.html). W *Read Model* używam czystych zapytań SQL po wykonaniu których otrzymujemy dane w postaci tablicy asocjacyjnej. W pełnym rozwiązaniu dostępnym w [repozytorium projektu](https://github.com/devenvpl/auditor), dane te przetwarzane są na obiekty [DTO](https://en.wikipedia.org/wiki/Data_transfer_object). Teraz postaram się jedynie przybliżyć podstawową koncepcję.
+Pomijam tutaj warstwę *Repository*, *Entity* - ona ma swoje zastosowanie dla *[Write Model](/dsp2017-adrian/2017/03/19/auditor-cqrs-command.html)*. W *Read Model* używam czystych zapytań SQL po wykonaniu których otrzymujemy dane w postaci tablicy asocjacyjnej. W pełnym rozwiązaniu dostępnym w [repozytorium projektu](https://github.com/devenvpl/auditor), dane te przetwarzane są na obiekty [DTO](https://en.wikipedia.org/wiki/Data_transfer_object). Teraz postaram się jedynie przybliżyć podstawową koncepcję.
 
 # Query
 
