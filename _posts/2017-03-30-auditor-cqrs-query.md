@@ -11,13 +11,13 @@ comments: true
 
 *Read Model* w projekcie *Auditor* wykorzystuje bibliotekę [Doctrine DBAL](http://www.doctrine-project.org/projects/dbal.html). Umożliwia ona połączenie z bazą danych (w przypadku tego projektu - *MySQL*) oraz wykonywanie zapytań SQL.
 
-Pomijam tutaj warstwę *Repository*, *Entity* i używam czystych zapytań SQL po wykonaniu których otrzymujemy dane w postaci tablicy asocjacyjnej. W pełnym rozwiązaniu dostępnym w [repozytorium](https://github.com/devenvpl/auditor) dane te przetwarzane są na obiekty [DTO](https://en.wikipedia.org/wiki/Data_transfer_object). Teraz postaram się jedynie przybliżyć podstawową koncepcję.
+Pomijam tutaj warstwę *Repository*, *Entity* - ona ma swoje zastosowanie w żądaniach - [Command](/dsp2017-adrian/2017/03/19/auditor-cqrs-command.html). W *Read Model* używam czystych zapytań SQL po wykonaniu których otrzymujemy dane w postaci tablicy asocjacyjnej. W pełnym rozwiązaniu dostępnym w [repozytorium projektu](https://github.com/devenvpl/auditor), dane te przetwarzane są na obiekty [DTO](https://en.wikipedia.org/wiki/Data_transfer_object). Teraz postaram się jedynie przybliżyć podstawową koncepcję.
 
 # Query
 
 *Query* służy tylko i wyłącznie do odczytu danych. Nie ma tutaj miejsca na zmianę stanu systemu.
 
-Dlaczego akurat "czyste" zapytania SQL? Ponieważ pomijając abstrakcję narzucaną prze ORM (Query Buildery) mam pełną kontrolę nad zapytaniem które faktycznie się wykonuje na bazie danych. Mogę je dowolnie optymalizować, co nie zawsze jest możliwe gdy używam abstrakcji.
+Dlaczego akurat "czyste" zapytania SQL? Ponieważ pomijając abstrakcję narzucaną przez ORM / Query Builder. Mam pełną kontrolę nad zapytaniem które faktycznie się wykonuje na bazie danych. Mogę je dowolnie optymalizować, co nie zawsze jest możliwe gdy używam abstrakcji.
 
 ~~~php
 <?php
@@ -50,7 +50,7 @@ Dokładamy wtedy jednak dodatkowy element w aplikacji wymagający utrzymywania -
 
 # QueryDispatcher
 
-Rolą *QueryDispatcher* jest wywołanie *Query* w celu wykonania zapytania na bazie danych, a następnie zwrócenie danych do miejsca wywołania.
+Rolą *QueryDispatcher* jest przetworzenie *Query*, którego efektem jest wykonanie zapytania na bazie danych, a następnie zwrócenie danych do miejsca wywołania.
 
 Po co *QueryDispatcher*, jeżeli można ręcznie wykonywać niezbędne kroki z poziomu kontrolera? Między innymi po to aby, zapewnić jeden, ustandaryzowany punkt obsługujący wykonywanie zapytań na bazie danych. Dodatkowo to świetne miejsce na logowanie wykonywanych zapytań, ich częstotliwości, różnorodności przekazywanych parametrów czy po prostu czasu wykonywania.
 
@@ -79,7 +79,7 @@ W klasie *QueryDispatcher* nie dzieje się nic magicznego. Wstrzyknięty zostaje
 
 # Wdrażamy rozwiązanie
 
-Pierwszym krokiem jest dodanie nowej definicji do DIC. W moim przypadku jest to plik *services.yml*:
+Pierwszym krokiem jest dodanie nowej definicji do DIC. W projekcie korzystam z frameworka Symfony 3, kofigurację wstrzykiwania zależności definiuję w pliku *services.yml*:
 
 ~~~yml
 services:
