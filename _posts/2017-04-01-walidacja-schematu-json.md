@@ -1,6 +1,6 @@
 ---
 date: 2017-04-01 15:00
-title: "JSON Schema - czyli sposób opisanie struktury JSON"
+title: "JSON Schema - czyli sposób na opisanie struktury JSON"
 layout: post
 description: "Przykład zastosowania JSON Schema"
 tags: apietka dsp2017-adrian json php
@@ -15,7 +15,7 @@ Nie potrzebowaliśmy walidacji na poziomie poprawności wartości (np. czy ident
 
 Ręczna implementacja każdego z oczekiwanych schematów *JSON* wymagała by od nas sporego nakładu pracy. Na szczęście istnieje coś takiego jak *JSON Schema*.
 
-# Czym jest JSON Schema
+## Czym jest JSON Schema
 
 *JSON Schema* pozwala na opisanie struktury dokumentu *JSON*, w sposób przejrzysty i czytelny dla człowieka. Następnie na tej podstawie można zwerferyfikować czy dostarczony dokument *JSON* spełnia założone kryteria.
 
@@ -23,7 +23,7 @@ Ręczna implementacja każdego z oczekiwanych schematów *JSON* wymagała by od 
 
 Więcej informacji oraz wyczerpującą dokumentację możesz znaleźć na stronie: [json-schema.org](http://json-schema.org/).
 
-# Przykład JSON Schema
+## Przykład JSON Schema
 
 Dla następującego dokumentu JSON:
 
@@ -92,7 +92,7 @@ Opisane zostały wymagane pola oraz ich prawidłowe typy danych. Na oficjalnej s
 
 Do stworzenia takiego opisu dokumentu, można wykorzystać narzędzie [JSON Schema Generator](http://jsonschema.net/#/). Na podstawie dostarczonego dokumentu *JSON*, generowany jest jego opis w formacie *JSON Schema*.
 
-# Przykład walidacji (PHP)
+## Przykład walidacji (PHP)
 
 Do walidacji schematu wykorzystałem zewnętrzną bibliotekę: [justinrainbow/json-schema](https://github.com/justinrainbow/json-schema).
 
@@ -127,6 +127,6 @@ if ($validator->isValid()) {
 
 Zmienna ```$jsonToValid``` zawiera ścieżkę do danych przechowywanych w formacie JSON. Natomiast ```$schemaFile``` ścieżkę do pliku z schematem *JSON Schema*.
 
-# Podsumowanie
+## Podsumowanie
 
 Walidacja schematu dokumentu *JSON* nie musi być uciążliwa i "manualna". Dzięki zastosowaniu *JSON Schema* i generatora [JSON Schema Generator](http://jsonschema.net/#/) można ułatwić i zautomatyzować sobie pracę. W moim przypadku przyśpieszyło to znacząco wdrożenie funkcji walidacji schematu dostarczanych przez użytkownika danych w formacie *JSON*.
