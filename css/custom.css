@@ -68,6 +68,10 @@ header .h-wrap {
         background: #fff;
     }
 
+#home {
+    padding: 0 50px;
+}
+
 section#single-wrap {
     max-width: 950px;
 }
