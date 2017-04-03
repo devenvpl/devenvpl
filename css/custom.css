@@ -47,3 +47,54 @@ hr {
 .lineno {
     margin-right: 12px;
 }
+
+header .h-wrap {
+    background: black;
+}
+
+    header .h-wrap h1.title a {
+        color: #fff;
+        font-size: 30px;
+        font-weight: 100;
+    }
+
+        header .h-wrap h1.title a:hover {
+            color: #fff;
+        }
+
+    header .h-wrap .menu-icon .lines::before,
+    header .h-wrap .menu-icon .lines::after,
+    header .h-wrap .menu-icon .lines {
+        background: #fff;
+    }
+
+section#single-wrap {
+    max-width: 950px;
+}
+
+ul.posts {
+    max-width: 950px;
+    margin: 50px auto;
+}
+
+ul.posts li {
+    border-bottom: 1px solid #d7d7d7;
+}
+
+    ul.posts li .p-wrap {
+        background: inherit;
+        padding: 20px 0;
+    }
+
+    ul.posts li .p-wrap:hover {
+        background: inherit;
+        padding: 20px 0;
+    }
+
+    ul.posts li a {
+        color: inherit;
+    }
+
+    ul.posts li .date {
+        color: #989898;
+    }
