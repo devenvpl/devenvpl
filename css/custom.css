@@ -72,6 +72,10 @@ section#single-wrap {
     max-width: 950px;
 }
 
+    section#single-wrap p {
+        text-align: justify;
+    }
+
 ul.posts {
     max-width: 950px;
     margin: 50px auto;
@@ -79,6 +83,7 @@ ul.posts {
 
 ul.posts li {
     border-bottom: 1px solid #d7d7d7;
+    font-family: 'Lora', Georgia, serif;
 }
 
     ul.posts li .p-wrap {
