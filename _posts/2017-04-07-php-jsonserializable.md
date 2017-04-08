@@ -11,7 +11,7 @@ comments: true
 
 Miałem ostatnio potrzebę serializacji obiektów do formatu *JSON*. Nie potrzebowałem rozbudowanych bibliotek, a tym bardziej wprowadzania kolejnych zależności do projektu. Mam nieodparte wrażenie, że w każdym z projektów w których pracuje, jesteśmy krok od *[Dependency Hell](https://en.wikipedia.org/wiki/Dependency_hell)*.
 
-Na szczęście do prostych zadań, świetnie spisuje się dostarczony w PHP (od wersji 5.4 wraz z modułem JSON) interfejs *JsonSerializable*. Wystarczy aby klasa implementująca interfejs posiadała metodę *jsonSerialize()* która zwraca dane mogące zostać zserializowane funkcją *json_encode()*. Czyli tak na prawdę każdy dowolny typ danych, za wyjątkiem typu *resource*.
+Na szczęście do prostych zadań, świetnie spisuje się dostarczony w PHP (od wersji 5.4 wraz z modułem *[JSON](http://php.net/manual/en/book.json.php)*) interfejs *JsonSerializable*. Wystarczy aby klasa implementująca interfejs posiadała metodę *jsonSerialize()* która zwraca dane mogące zostać zserializowane funkcją *json_encode()*. Czyli tak na prawdę każdy dowolny typ danych, za wyjątkiem typu *resource*.
 
 Zdefiniuję na początek trzy różne klasy - *Author*, *Comment*, *Article*. Każda z nich posiada implementację interfejsu *JsonSerializable*. Dla uproszczenia przykładu w klasie *Article*, na sztywno ustawiam wymagane wartości.
 
@@ -95,7 +95,9 @@ Obiekt klasy *Author* przy serializacji do formatu *JSON* zwróci najprostszą i
 
 Sprowadzenie obiektów do formatu *JSON* wymaga jedynie wywołania funkcji *json_encode()*:
 
-~~~php    
+~~~php
+<?php
+
 echo json_encode(new Article(), JSON_PRETTY_PRINT);
 ~~~
 
@@ -135,4 +137,4 @@ class MyDateTime extends DateTime implements JsonSerializable
 }
 ~~~
 
-Jeżeli Twój system nie składa się z kilkudziesiąciu klas które należy serializować do formatu *JSON* rozwiązanie zaprezentowane powyżej jest całkiem przyjemne. Implementacja jednej metody, możliwość definiowania formatu końcowego (struktury, oraz nazewnictwa powszczególnych pól) jest szybka, a dodatkowo nie wymagamy kolejnej zalezności do biblioteki zewnętrznej. Jeśli natomiast nasz system bardzo szybko się rozrasta, posiadamy z dnia na dzień kolejne klasy wymagające transformacji - to prawdopodobnie jest to dobry moment na zastanowienie się nad automatyzacją serializacji.
+Jeżeli Twój system nie składa się z kilkudziesiąciu klas które należy serializować do formatu *JSON*, rozwiązanie zaprezentowane powyżej jest całkiem przyjemne. Implementacja jednej metody, możliwość definiowania formatu końcowego (struktury oraz nazewnictwa powszczególnych pól) jest szybka, a dodatkowo nie wymaga kolejnej zalezności do biblioteki zewnętrznej. Jeśli natomiast nasz system bardzo szybko się rozrasta, posiadamy z dnia na dzień kolejne klasy wymagające transformacji - to prawdopodobnie jest to dobry moment na zastanowienie się nad automatyzacją serializacji.
