@@ -9,14 +9,14 @@ author: apietka
 comments: true
 ---
 
-*[Gulp](http://gulpjs.com/)* jest narzędziem automatyzującym często powtarzających się zadań związanych z tworzeniem oprogramowania. Co mam dokładnie na myśli? Przykładem może być: 
+*[Gulp](http://gulpjs.com/)* jest narzędziem automatyzującym często powtarzające się zadania, związane z procesem tworzenia oprogramowania. Co mam dokładnie na myśli? Przykładem może być: 
 
 - kompilacja plików LESS/SASS do CSS,
 - konkatenacja i minifikacja plików JavaScript,
 - budowanie archiwum z artefaktami gotowymi do wdrożenia na "produkcji",
 - uruchamianie testów wraz z generowaniem raportu (np. z pokrycia kodu testami jednostkowymi).
 
-Przykłady zastosowania można mnożyć praktycznie w nieskończoność. W projekcie *Auditor*, *Gulp* odpowiedzialny jest za trzy główne zadania po stronie aplikacji frontendowej:
+Przykłady zastosowań można praktycznie mnożyć w nieskończoność. W projekcie *Auditor*, *Gulp* odpowiedzialny jest za trzy główne zadania po stronie aplikacji frontendowej:
 
 1) weryfikację kodu JavaScript za pomocą *ESLint*,
 2) generowanie pliku *index.html* wraz z dołączeniem wszystkich niezbędnych plików CSS oraz JS,
