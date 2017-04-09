@@ -1,8 +1,8 @@
 ---
 date: 2017-04-09 22:00
-title: "Auditor - Gulp"
+title: "Auditor - Gulp - czyli sposób na automatyzację powtarzających się zadań"
 layout: post
-description: "Auditor - Gulp czyli narzędzie automatyzujące pracę przy aplikacji frontendowej"
+description: "Auditor - Gulp czyli narzędzie automatyzujące powtarzające się zadania związane z tworzeniem oprogramowania."
 tags: apietka dsp2017-adrian auditor frontend gulp
 category: dsp2017-adrian
 author: apietka
@@ -16,7 +16,7 @@ comments: true
 - budowanie archiwum z artefaktami gotowymi do wdrożenia na "produkcji",
 - uruchamianie testów wraz z generowaniem raportu (np. z pokrycia kodu testami jednostkowymi).
 
-Przykłady zastosowania można mnożyć praktycznie w nieskończoność. W projekcie *Auditor*, *Gulp* odpowiedzialny jest za trzy główne zadania:
+Przykłady zastosowania można mnożyć praktycznie w nieskończoność. W projekcie *Auditor*, *Gulp* odpowiedzialny jest za trzy główne zadania po stronie aplikacji frontendowej:
 
 1) weryfikację kodu JavaScript za pomocą *ESLint*,
 2) generowanie pliku *index.html* wraz z dołączeniem wszystkich niezbędnych plików CSS oraz JS,
