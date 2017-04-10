@@ -5,7 +5,7 @@ title: Blog techniczny
 
 <div id="home">
   <ul class="posts">
-    {% for post in site.posts %}
+    {% for post in paginator.posts %}
       <li itemscope itemtype="http://schema.org/BlogPosting">
         <a href="{{ site.baseurl }}{{ post.url }}" itemprop="url">
           <div class="p-wrap">
@@ -19,4 +19,14 @@ title: Blog techniczny
       </li>
     {% endfor %}
   </ul>
+</div>
+
+<div id="pagination">
+  {% if paginator.previous_page %}
+  <a href="{{ paginator.previous_page_path }}" class="previous"><<</a>
+  {% endif %}
+  <span class="page_number ">{{ paginator.page }} / {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+  <a href="{{ paginator.next_page_path }}" class="next">>></a>
+  {% endif %}
 </div>

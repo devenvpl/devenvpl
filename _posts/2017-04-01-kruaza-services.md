@@ -68,7 +68,7 @@ Dlatego dużo lepszym rozwiązaniem jest tworzenie osobnego serwisu dla każdej 
 
 ## Czy takie podejście zawsze jest dobre?
 Nie. Jak ze wszystkim tak i teraz trzeba dobierać dobre rozwiązania do projektu. W większych projektach na pewno dużo
-lepsza będzie implementacja CQRS, o której rozpisuje się @Adrian w swojej [części bloga](http://devenv.pl/dsp2017-adrian.html),
+lepsza będzie implementacja CQRS, o której rozpisuje się @adrianpietka w swojej [części bloga](http://devenv.pl/dsp2017-adrian.html),
 lub podobnych bardziej zaawansowanych rozwiązań.
 
 Jednak przy niewielkich projektach pozwala to na łatwą separację logikę od infrastruktury i zachowanie dobrych zasad

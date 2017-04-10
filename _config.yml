@@ -19,6 +19,8 @@ authors:
     email: ksiazek.mate@gmail.com
 gems:
   - jekyll-feed
+  - jekyll-mentions
+  - jekyll-paginate
 feed:
   path: atom.xml
 timezone: Europe/Warsaw
@@ -30,3 +32,5 @@ kramdown:
     block:
       line_numbers: true
       start_line: 1
+paginate: 10
+paginate_path: "/blog:num/"

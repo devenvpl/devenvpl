@@ -107,3 +107,13 @@ ul.posts li {
     ul.posts li .date {
         color: #989898;
     }
+
+#pagination {
+    font-family: 'Lora', Georgia, serif;
+    text-align: center;
+}
+
+#pagination a {
+    color: #39f;
+    text-decoration: none;
+}
