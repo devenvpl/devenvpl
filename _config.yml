@@ -28,6 +28,8 @@ timezone: Europe/Warsaw
 collections:
   categories:
     output: true
+  tags:
+    output: true
 kramdown:
   syntax_highlighter_opts:
     block:
