@@ -1,10 +1,13 @@
 module Jekyll
     module Tags
-        class TagGenerator < Command
+        class TagGenerator < Generator
             def generate(site)
+                dir_name = "_tags";
+                Dir.mkdir(dir_name) unless File.exists?(dir_name)
+
                 for tag in site.tags
                     tag_name = tag[0]
-                    File.open("_categories/tags/#{tag_name}.md", "w") do |f|
+                    File.open(dir_name + "/#{tag_name}.md", "w") do |f|
                         f.puts(file_content(tag_name))
                     end
                 end
