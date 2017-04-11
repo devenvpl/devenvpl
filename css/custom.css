@@ -3,7 +3,7 @@
 }
 
 .tag {
-    display: inline;
+    display: inline-block;
     padding: .2em .6em .3em;
     font-size: 75%;
     font-weight: 300;
@@ -14,7 +14,6 @@
     vertical-align: baseline;
     border-radius: .25em;
     background-color: #39f;
-    margin: 12px 0;
 }
 
 .tag a {
