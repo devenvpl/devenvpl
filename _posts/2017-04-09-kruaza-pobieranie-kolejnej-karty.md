@@ -11,7 +11,7 @@ comments: true
 
 W końcu udało mi się uporać z główną częścią logiki aplikacji, czyli pobieraniem kolejnej karty z pudełka. Temat nie był
 skomplikowany, ale trzeba było znaleźć odrobinę czasu żeby przy tym przysiąść i pokryć wszystkie przypadki użycia.
-Okazało się, że piękna kwietniowa niedziela okazała się idealnym dniem aby to zaimplementować ;-)
+Okazało się, że piękna kwietniowa niedziela okazała się idealnym dniem aby to zaimplementować :smile:
 
 Dzisiejszy post będzie bardziej teoretyczny, aby opisać zasady działania, nie widzę sensu aby na razie wklejać tutaj
 listingi kodu, te pojawią się może przy okazji kolejnych postów. Mimo wszystko dotychczasowy kod aplikacji dostępny

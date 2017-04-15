@@ -12,7 +12,7 @@ comments: true
 Nasz blog *devenv* hostowany jest na [github pages](https://pages.github.com/) z wykorzystaniem narzędzia 
 [jekyll](https://jekyllrb.com/). Jeszcze 3 tygodnie temu *github pages* kojarzyły mi się tylko jako statyczne stronki HTML,
 jednak kiedy postanowiliśmy uruchomić bloga i zastanawialiśmy się czy ma to być kolejna strona oparta o *WordPressa*,
-@Adrian zaproponował użycie *Jekyll*a. Nie miałem nic przeciwko, tym bardziej, że "instalacja" zajęła mu chwilkę, a dla
+@adrianpietka zaproponował użycie *Jekyll*a. Nie miałem nic przeciwko, tym bardziej, że "instalacja" zajęła mu chwilkę, a dla
 mnie to kolejna nowość, którą warto poznać.
 
 Jeśli w przyszłości to rozwiązanie okaże się niewystarczające to zawsze można zmienić, ale na razie wydaje się być

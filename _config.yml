@@ -19,14 +19,21 @@ authors:
     email: ksiazek.mate@gmail.com
 gems:
   - jekyll-feed
+  - jekyll-mentions
+  - jekyll-paginate
+  - jemoji
 feed:
   path: atom.xml
 timezone: Europe/Warsaw
 collections:
   categories:
     output: true
+  tags:
+    output: true
 kramdown:
   syntax_highlighter_opts:
     block:
       line_numbers: true
       start_line: 1
+paginate: 10
+paginate_path: "/blog:num/"
