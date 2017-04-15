@@ -18,9 +18,9 @@ comments: true
 
 Przykłady zastosowań można praktycznie mnożyć w nieskończoność. W projekcie *Auditor*, *Gulp* odpowiedzialny jest za trzy główne zadania po stronie aplikacji frontendowej:
 
-1) weryfikację kodu JavaScript za pomocą *ESLint*,
-2) generowanie pliku *index.html* wraz z dołączeniem wszystkich niezbędnych plików CSS oraz JS,
-3) uruchomienie prostego serwera HTTP w celu serwowania plików statycznych.
+1. weryfikację kodu JavaScript za pomocą *ESLint*,
+2. generowanie pliku *index.html* wraz z dołączeniem wszystkich niezbędnych plików CSS oraz JS,
+3. uruchomienie prostego serwera HTTP w celu serwowania plików statycznych.
 
 Aby rozpocząć pracę z przedstawionym narzędziem, polecam oficjalną dokumentację, a konkretniej artykuł: [Getting Started](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md).
 
