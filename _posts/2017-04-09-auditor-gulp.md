@@ -41,7 +41,7 @@ gulp.task('lint', function () {
 
 ## Task - dist
 
-Task ```dist``` jest na razie najbardziej złożonym zadaniem realizowanym przez *Gulp* w projekcie. Odpowiedzialny jest za:
+Task ```dist``` jest na razie najbardziej złożonym zadaniem realizowanym przez *Gulp* w projekcie *Auditor*. Odpowiedzialny jest za:
 
 - ```dist:clean``` - wyczyszczenie folderu *dist/* w którym zapisywane są skonkatenowane biblioteki zewnętrzne (JS),
 - ```dist:vendor:lodash``` - stworzenie pliku wynikowego dla biblioteki *[lodash](https://lodash.com/)* za pomocą *[Browserify](http://browserify.org/)*,
