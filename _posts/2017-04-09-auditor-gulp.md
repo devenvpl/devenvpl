@@ -26,6 +26,8 @@ Aby rozpocząć pracę z przedstawionym narzędziem, polecam oficjalną dokument
 
 ## Task - lint
 
+Poprawność składni weryfikuje mi narzędzie ESLint. Wszystkie pliki JS znajdujące się w folderze ```src``` muszą spełniać reguły zdefiniowane w pliku ```.eslintrc.yml```.
+
 ~~~js
 const eslint = require('gulp-eslint');
 
@@ -38,6 +40,14 @@ gulp.task('lint', function () {
 ~~~~
 
 ## Task - dist
+
+Task ```dist``` jest na razie najbardziej złożonym zadaniem realizowanym przez *Gulp* w projekcie. Odpowiedzialny jest za:
+
+- ```dist:clean``` - wyczyszczenie folderu *dist/* w którym zapisywane są skonkatenowane biblioteki zewnętrzne (JS),
+- ```dist:vendor:lodash``` - stworzenie pliku wynikowego dla biblioteki *[lodash](https://lodash.com/)* za pomocą *[Browserify](http://browserify.org/)*,
+- ```dist:vendor``` - konkatenacja bibliotek zewnętrznych do jednego pliku *dist/vendor.js*,
+- ```dist:app``` - skopiowanie szablonu pliku *index.html* do folderu głównego,
+- ```dist:inject``` - *wstrzyknięcie* plików JS do pliku *index.html*.
 
 ~~~js
 gulp.task('dist:clean', () => {
@@ -87,11 +97,15 @@ gulp.task('dist', [
 
 ## Task - server
 
+Serwer HTTP odpowiedzialny za udostępnienie plików statycznych aplikacji frontendowej uruchamiony jest za pomocą pluginu [gulp-serve](https://www.npmjs.com/package/gulp-serve). Jego podstawowa konfiguracja wygląda w następujący sposób:
+
 ~~~js
 const serve = require('gulp-serve');
 
 gulp.task('serve', serve('./'));
 ~~~~
+
+Po uruchomieniu zadania ```$: gulp serve```, aplikacja frontendowa zostanie udostępniona pod adresem ```http://127.0.0.1:3000```.
 
 ## Podsumowanie
 
