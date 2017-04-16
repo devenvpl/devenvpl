@@ -1,9 +1,9 @@
 ---
-date: 2017-04-16 13:30
-title: "MQTT - protokół transmisji danych dla IoT"
+date: 2017-04-16 20:30
+title: "Auditor - Controllers"
 layout: post
-description: "Wstęp do protokołu MQTT z wykorzystaniem brokera Mosquitto."
-tags: apietka dsp2017-adrian mqtt mosquitto iot integration-patterns
+description: "Omówienie wzorca MVC wraz z jego zależnościami względem routingu."
+tags: apietka dsp2017-adrian auditor controllers mvc
 category: dsp2017-adrian
 author: apietka
 comments: true
