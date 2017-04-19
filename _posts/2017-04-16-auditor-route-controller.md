@@ -14,7 +14,7 @@ Framework Symfony, powiązanie ścieżki (*route*) z kontrolerem (*controller*) 
 - adnotacje na poziomie kontrolera - czyli silne powiązanie akcja kontrolera - ścieżka,
 - osobny plik konfiguracyjny YAML, XML lub PHP - rozluźnienie powiązania, osobny plik z definicją.
 
-W projekcie *Auditor* (w sumie jak i również w większości projektów) zdecydowałem się na definicję ścieżki na poziomie adnotacji zawartych w kontrolerze:
+W projekcie *Auditor* (w sumie jak i również w większości innych projektów) zdecydowałem się na definicję ścieżki na poziomie adnotacji zawartych w kontrolerze. Całość sprowadza się do dodania komentarza z adnotacją ```@Route``` oraz opcjonalnie ```@Method```.
 
 ~~~php
 <?php
@@ -42,7 +42,12 @@ class ProjectsController extends AppController
 }
 ~~~
 
-Trochę zdecentralizowana definicja może okazać się problematyczna ze względu na rozproszenie zapisu ścieżek po kilku/kilkunastu  plikach z kontrolerami. Przeszukiwanie takiego zbioru może okazać się problematyczne. Na szczęście problem ten można bardzo łatwo rozwiązać, poprzez wywołanie komendy ```debug:router``` w konsoli Symfony. Wyświetla ona listę wszystkich zdefiniowanych ścieżek w aplikacji:
+Kontroler jest "wejściem" do systemu - prostym, czytelnym i jednoznacznym. Jego rola powinna zakończyć się na przekazaniu wgłąb aplikacji danych wejściowych i zwróceniu rezultatu. Jest również mocno powiązany z adresem który musi zostać wywołany aby wykonać akcję kontrolera. To taka nieodłączna część. Dlatego też definicję ścieżek umieszczam w tym konkretnym miejscu. Nie w zewnętrznym pliku, tylko w adnotacji dla konkretnej akcji. Z drugiej strony widzę dwa potencjalne zagrożenia:
+
+- nazwy ścieżek (*name*) - zahardkodowane jako *string*. W widoku często wykorzystuje się nazwe ścieżki do generowania linku. Za każdym razem należy powielać wartość, co jest problematyczne w momencie zmiany nazwy ścieżki. Jednak istnieje na to proste rozwiązanie - używanie stałych dla nazwy ścieżki np. ```@Route("/projects", name=ProjectsController::ROUTE_LIST)```,
+- podmiana wykonywanej akcji dla konkretnej ścieżki - niestety czeka nas ręczna zmiana w kontrolerze.
+
+Jeszcze jedna kwestia. Przeszukiwanie takiego zbioru może okazać się problematyczne. Zdecentralizowana definicja czyli rozproszony zapis ścieżek w kilku/kilkunastu plikach z kontrolerami nie ułatwia zadania. Na szczęście problem ten rozwiązuje wywołanie komendy ```debug:router``` w konsoli Symfony. Wyświetla ona listę wszystkich zdefiniowanych ścieżek w aplikacji:
 
 ```
 $: php bin/console debug:router
