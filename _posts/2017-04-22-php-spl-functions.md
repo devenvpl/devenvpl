@@ -9,7 +9,7 @@ author: apietka
 comments: true
 ---
 
-Chciałbym aby ten artykuł był początkiem serii postów przybliżających możliwości SPL, czyli *Standard PHP Library*.
+Chciałbym aby ten artykuł był początkiem serii postów przybliżających możliwości SPL - czyli *Standard PHP Library*.
 
 *SPL* jest zbiorem funkcji, struktur danych, iteratorów, wyjątków oraz klas do pracy z plikami. Podsumowując - zbiorem funkcji, interfejsów i klas pomagających rozwiązać typowe problemy.
 
@@ -25,7 +25,7 @@ W tym poście skupię się na przedstawieniu części funkcji zawartych w biblio
 array class_implements ( mixed $class [, bool $autoload = true ] )
 ```
 
-Funkcja *class_implements* zwraca listę interfejsów, które zostały zaimplementowane przez klasę. Pierwszy argument przyjmuje nazwę klasy (wraz z przestrzenią nazwy w której się znajduje) lub jej instancję. Drugi wartość *bool* (domyślnie *true*) - oznacza ona dla w klasie (dla podanej jej nazwy) ma zostać uwzględniona funkcja magiczna ```__autoload```.
+Funkcja *class_implements* zwraca listę interfejsów, które zostały zaimplementowane przez klasę. Pierwszy argument przyjmuje nazwę klasy (wraz z przestrzenią nazwy w której się znajduje) lub jej instancję. Drugi wartość *bool* (domyślnie *true*) - oznacza ona, że do załadowania klasy (dla jej podanej nazwy) ma zostać uwzględniona funkcja magiczna ```__autoload```.
 
 Rezultatem wywołania będzie tablica asocjacyjna (klucz => wartość) z nazwą zaimplementowanego interfejsu (jako klucz i wartość) wraz z uwzględnieniem *namespace*.
 
@@ -92,7 +92,7 @@ var_dump(class_parents($abc));
 var_dump(class_parents('DevEnv\Abc'));
 ~~~
 
-Rezultatem wywołania będzie tablica asocjacyjna (klucz => wartość) z nazwą klasy nadrzędnej (jako klucz i wartość) wraz z uwzględnieniem *namespace*. W obu przypadkach wynikiem jest następujący:
+Rezultatem wywołania będzie tablica asocjacyjna (klucz => wartość) z nazwą klasy nadrzędnej (jako klucz i wartość) wraz z uwzględnieniem *namespace*. W obu przypadkach wynik jest następujący:
 
 ```
 array(2) {
@@ -109,7 +109,7 @@ W momencie podania nieistniejącej nazwy klasy, interpreter PHP zachowa się ide
 array class_uses ( mixed $class [, bool $autoload = true ] )
 ```
 
-Funkcja *class_uses* zwraca listę użytych przez klasę definicji *trait*. Argumenty funkcji są identyczne jak w przypadku *class_implements* oraz *class_parents*. Rezultatem jest tak jak w przypadku w.w funkcji, tablica asocjacyjna z nazwami *traits*. Warto pamiętać, że w tym przypadku nie są dołączane *traits* klas nadrzędnych. Obrazuje to przykład przedstawiony poniżej:
+Funkcja *class_uses* zwraca listę użytych przez klasę definicji *trait*. Argumenty funkcji są identyczne jak w przypadku *class_implements* oraz *class_parents*. Rezultatem jest tak jak w przypadku w.w funkcji - tablica asocjacyjna z nazwami *traits*. Warto pamiętać, że w tym przypadku nie są dołączane *traits* klas nadrzędnych. Obrazuje to przykład przedstawiony poniżej:
 
 ~~~php
 <?php
