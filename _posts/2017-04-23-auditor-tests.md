@@ -1,6 +1,6 @@
 ---
 date: 2017-04-23 23:30
-title: "Auditor - O organizacji testów automatycznych"
+title: "Auditor - Organizacja testów automatycznych"
 layout: post
 description: "Organizacja testów jednostkowych oraz integracyjnych dla projektu Auditor."
 tags: apietka dsp2017-adrian auditor php tests symfony
