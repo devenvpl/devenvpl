@@ -65,20 +65,20 @@ Po stworzeniu *DTO* musiałem jeszcze nanieść poprawkę na *Query*.
 ~~~php
 <?php
 
-public function execute(Dbal $dbal) : ProjectDetailsDto
+public function execute(Dbal $dbal) : ProjectDto
 {
     $sql = 'SELECT * FROM project WHERE id = :id LIMIT 1';
     $project = $dbal->fetchAssoc($sql, [':id' => $this->projectId]);
 
-    return new ProjectDetailsDto($project);
+    return new ProjectDto($project);
 }
 ~~~
 
-Zwrócone dane z zapytania *SQL* wykorzystuję do stworzenia instancji obiektu *DTO*. Dodatkowo poprawiam *return type* dla metody. Teraz w jasny i jednoznaczny sposób określiłem, jaka struktura danych zwracana jest przez metodę, a zwracam instancję klasy *ProjectDetailsDto*. Nie muszę się już domyślać, ani też debugować kodu aby dowiedzieć się co zwraca metoda *execute*.
+Zwrócone dane z zapytania *SQL* wykorzystuję do stworzenia instancji obiektu *DTO*. Dodatkowo poprawiam *return type* dla metody. Teraz w jasny i jednoznaczny sposób określiłem, jaka struktura danych zwracana jest przez metodę, a zwracam instancję klasy *ProjectDto*. Nie muszę się już domyślać, ani też debugować kodu aby dowiedzieć się co zwraca metoda *execute*.
  
 ### DTO będące kolekcją innych DTO
 
-Tablica obiektów zawsze przyprawia mnie o dreszcze. Podobnie jak zwracanie tablicy asocjacyjnej w przypadku pojedynczych elementów, tak i tutaj nie wiadomo nic na temat struktury zwracanych danych. Moim celem było stworzenie obiektu który jasno wskazuje z jaką kolekcją elementów mamy doczynienia. ```ProjectCollectionDto``` jest kolekcją obiektów ```ProjectDetailsDto```. Czyli "opakowaniem" na zbiór obiektów *DTO* reprezentujących "projekt".
+Tablica obiektów zawsze przyprawia mnie o dreszcze. Podobnie jak zwracanie tablicy asocjacyjnej w przypadku pojedynczych elementów, tak i tutaj nie wiadomo nic na temat struktury zwracanych danych. Moim celem było stworzenie obiektu który jasno wskazuje z jaką kolekcją elementów mamy doczynienia. ```ProjectCollectionDto``` jest kolekcją obiektów ```ProjectDto```. Czyli "opakowaniem" na zbiór obiektów *DTO* reprezentujących "projekt".
 
 Do implementacji takiej kolekcji wykorzystałem klasę z biblioteki standardowej *SPL* - [```ArrayIterator```](http://php.net/manual/en/class.arrayiterator.php). Wystarczy, że podczas tworzenia instancji obiektu przekażę, tablicę z wynikami zapytania, a następnie zmodyfikuję zachowanie metody ```current```. Tak aby zwracała obiekt *DTO*. Całość obrazuje poniższy przykład:
 
