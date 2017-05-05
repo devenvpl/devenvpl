@@ -1,12 +1,14 @@
 ---
 date: 2017-04-23 22:30
 title: Krauza - pierwszy etap wdrożenia GraphQL w projekcie PHP
-layout: post
 description: Opis pierwszego zetknięcia z graphql i próbą jego implementacji w projekcie php
 tags: mksiazek dsp2017-mateusz krauza projekt php oop graphql
 category: dsp2017-mateusz
 author: mksiazek
 comments: true
+layout: post-with-related-tag
+related_tag: "krauza"
+related_title: "Zobacz inne posty związane z projektem Krauza"
 ---
 
 W ramach konkursu *Daj się poznać* realizuję projekt *Krauza*, ostatnio pisałem, że przy okazji tworzenia tej aplikacji

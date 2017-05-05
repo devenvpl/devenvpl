@@ -1,12 +1,14 @@
 ---
 date: 2017-04-01 11:11
 title: Krauza - ciut więcej o serwisach
-layout: post
 description: Wiecej informacji o klasie Service
 tags: mksiazek dsp2017-mateusz krauza projekt php oop
 category: dsp2017-mateusz
 author: mksiazek
 comments: true
+layout: post-with-related-tag
+related_tag: "krauza"
+related_title: "Zobacz inne posty związane z projektem Krauza"
 ---
 
 ## Jakie zadania pełnią serwisy w projekcie "Krauza"?

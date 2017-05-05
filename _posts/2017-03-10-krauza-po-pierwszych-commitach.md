@@ -1,12 +1,14 @@
 ---
 date: 2017-03-10 15:05
 title: Krauza po pierwszych zmianach
-layout: post
 description: Opis pierwszych zaimplementowanych elementów aplikacji. 
 tags: mksiazek dsp2017-mateusz projekt krauza php
 category: dsp2017-mateusz
 author: mksiazek
 comments: true
+layout: post-with-related-tag
+related_tag: "krauza"
+related_title: "Zobacz inne posty związane z projektem Krauza"
 ---
 
 W ostatnim czasie dokonałem pierwszych zmian w repozytorium czego efektem jest już wstępny zarys struktury aplikacji.

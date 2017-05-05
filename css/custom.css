@@ -126,3 +126,25 @@ h2 + .highlighter-rouge,
 h3 + .highlighter-rouge { 
     margin-top: 20px;
 }
+
+section#single-wrap .feat.related-posts {
+    margin-bottom: 20px;
+}
+
+section#single-wrap .related-posts-title {
+    position: relative;
+    background: #FFF;
+    padding: 0 20px;
+    top: 11px;
+    display: inline-block;
+    font-size: 82%;
+}
+
+.related-posts-list {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+section#single-wrap ul.related-posts-list li {
+    margin-bottom: 8px;
+}

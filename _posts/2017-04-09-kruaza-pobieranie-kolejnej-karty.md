@@ -1,12 +1,14 @@
 ---
 date: 2017-04-09 22:35
 title: Krauza - pobieranie kart
-layout: post
 description: Opis głównej logiki aplikacji
 tags: mksiazek dsp2017-mateusz krauza projekt php oop
 category: dsp2017-mateusz
 author: mksiazek
 comments: true
+layout: post-with-related-tag
+related_tag: "krauza"
+related_title: "Zobacz inne posty związane z projektem Krauza"
 ---
 
 W końcu udało mi się uporać z główną częścią logiki aplikacji, czyli pobieraniem kolejnej karty z pudełka. Temat nie był

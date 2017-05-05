@@ -1,12 +1,14 @@
 ---
 date: 2017-03-26 18:40
 title: Krauza - jeszcze więcej o encjach
-layout: post
 description: Rozszerzenie informacji o klasie typu Entity 
 tags: mksiazek dsp2017-mateusz krauza projekt php oop
 category: dsp2017-mateusz
 author: mksiazek
 comments: true
+layout: post-with-related-tag
+related_tag: "krauza"
+related_title: "Zobacz inne posty związane z projektem Krauza"
 ---
 
 Od ostatniego postu w aplikacji *Krauza* nie pojawiło się nic nowego pod względem technicznym. Zaimplementowałem możliwość

@@ -1,12 +1,14 @@
 ---
 date: 2017-04-15 17:30
 title: Krauza - trochę HDD nikomu nie zaszkodzi
-layout: post
 description: Podsumowanie pierwszego etapu i założenia przed kolejnym
 tags: mksiazek dsp2017-mateusz krauza projekt php oop javascript mysql doctrine dbal graphql angular
 category: dsp2017-mateusz
 author: mksiazek
 comments: true
+layout: post-with-related-tag
+related_tag: "krauza"
+related_title: "Zobacz inne posty związane z projektem Krauza"
 ---
 
 Logika, którą zakładałem jako podstawa do mojego projektu została już zaimplementowana i przeszła już pierwszy refaktor.

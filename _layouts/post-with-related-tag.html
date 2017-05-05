@@ -1,0 +1,69 @@
+---
+layout: default
+---
+{% assign author = site.authors[page.author] %}
+
+{% if page.previous %} 
+  <a rel="prev" href="{{ site.baseurl }}{{ page.previous.url }}" id="prev">&larr;</a>
+{% endif %}
+{% if page.next %} 
+  <a rel="next" href="{{ site.baseurl }}{{ page.next.url }}" id="next">&rarr;</a>
+{% endif %}
+
+<section id="single-wrap">
+  <article class="single-content" itemscope itemtype="http://schema.org/BlogPosting">
+    <div class="feat">
+      <h5 class="page-date">
+        <span itemprop="author">{{ author.display_name }}</span>,
+        <time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+          {{ page.date | date: "%Y-%m-%d" }}
+        </time>
+        {% if page.category %}
+            , w: <a href="{{ site.baseurl }}/{{page.category}}.html">{{page.category}}</a>
+        {% endif %}
+      </h5>
+    </div>
+    <h1 class="page-title" itemprop="name headline">{{ page.title }}</h1>
+    <div itemprop="articleBody">
+      {{ content }}
+    </div>
+    <div>
+      <div class="feat related-posts">
+        <h5 class="related-posts-title">{{ page.related_title }}</h5>
+      </div>
+
+      <ul class="related-posts-list">
+        {% for post in site.posts %}
+          {% if post.tags contains page.related_tag %}
+            {% if post.title != page.title and post.date != page.date %}
+              <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="tag-content">
+      {% for tag in page.tags %}
+      <span class="tag"><a href="{{ site.baseurl }}/tag/{{tag}}.html">{{ tag }}</a></span>
+      {% endfor %}
+    </div>
+    <div id="share" class="feat">
+      <a href="http://twitter.com/share" class="popup">
+        <span class="icon-twitter"></span>
+      </a>
+    </div>
+    {% if page.comments %}
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <div id="disqus_thread"></div>
+    {% endif %}
+  </article>
+</section>
+
+<script>
+(function() { // DON'T EDIT BELOW THIS LINE
+var d = document, s = d.createElement('script');
+s.src = 'https://devenv.disqus.com/embed.js';
+s.setAttribute('data-timestamp', +new Date());
+(d.head || d.body).appendChild(s);
+})();
+</script>

@@ -1,12 +1,14 @@
 ---
 date: 2017-03-03 16:10
 title: "Krauza - założenia do projektu"
-layout: post
 description: Wstępne założenia i wprowadzenie do projektu
 tags: mksiazek dsp2017-mateusz projekt krauza
 category: dsp2017-mateusz
 author: mksiazek
 comments: true
+layout: post-with-related-tag
+related_tag: "krauza"
+related_title: "Zobacz inne posty związane z projektem Krauza"
 ---
 
 W ramach konkursu [Daj się poznać](http://dajsiepoznac.pl) postanowiłem zrealizować projekt [Krauza](https://github.com/mejt/Krauza)\*,

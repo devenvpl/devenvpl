@@ -1,12 +1,14 @@
 ---
 date: 2017-04-30 15:50
 title: "Krauza - obsługa wyjątków"
-layout: post
 description: Trochę informacji o obsłudze wyjątków i o tym jak powinno się je traktować
 tags: mksiazek dsp2017-mateusz krauza projekt php oop dobre-praktyki
 category: dsp2017-mateusz
 author: mksiazek
 comments: true
+layout: post-with-related-tag
+related_tag: "krauza"
+related_title: "Zobacz inne posty związane z projektem Krauza"
 ---
 
 > Tester webaplikacji wchodzi do baru. Zamawia piwo. Zamawia 0 piw. Zamawia 99999999999 piw. Zamawia zlew. Zamawia -1,337

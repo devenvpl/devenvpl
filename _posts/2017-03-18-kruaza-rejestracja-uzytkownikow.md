@@ -1,12 +1,14 @@
 ---
 date: 2017-03-18 15:00
 title: Krauza - rejestracja użytkowników
-layout: post
 description: Proces rejestracji użytkowników
 tags: mksiazek dsp2017-mateusz krauza projekt php oop
 category: dsp2017-mateusz
 author: mksiazek
 comments: true
+layout: post-with-related-tag
+related_tag: "krauza"
+related_title: "Zobacz inne posty związane z projektem Krauza"
 ---
 
 Dzisiejszy post będzie uzupełnieniem do [wpisu sprzed tygodnia](/dsp2017-mateusz/2017/03/10/krauza-po-pierwszych-commitach.html),
