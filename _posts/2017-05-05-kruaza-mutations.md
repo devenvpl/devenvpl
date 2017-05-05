@@ -173,26 +173,26 @@ jest wartość według typu `ErrorType` zaprezentowanego poniżej.
 
 class ErrorType extends ObjectType
 {
-    public function __construct()
-    {
-        $config = [
-            'fields' => [
-                'errorType' => [
-                    'type' => Type::string(),
-                    'description' => 'The type of the error (infrastructure issue or breaking the domain contract)'
-                ],
-                'key' => [
-                    'type' => Type::string(),
-                    'description' => 'The key of the error'
-                ],
-                'message' => [
-                    'type' => Type::string(),
-                    'description' => 'The message of the error'
-                ]
-            ]
-        ];
+  public function __construct()
+  {
+    $config = [
+      'fields' => [
+        'errorType' => [
+          'type' => Type::string(),
+          'description' => 'The type of the error (infrastructure issue or breaking the domain contract)'
+        ],
+        'key' => [
+          'type' => Type::string(),
+          'description' => 'The key of the error'
+        ],
+        'message' => [
+          'type' => Type::string(),
+          'description' => 'The message of the error'
+        ]
+      ]
+    ];
 
-        parent::__construct($config);
-    }
+    parent::__construct($config);
+  }
 }
 ~~~
