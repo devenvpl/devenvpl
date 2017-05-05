@@ -9,6 +9,7 @@ comments: true
 layout: post-with-related-tag
 related_tag: "krauza"
 related_title: "Zobacz inne posty związane z projektem Krauza"
+related_message: Projekt <i>Krauza</i> realizowany jest w ramach konkursu <a href="http://devstyle.pl/daj-sie-poznac/">Daj Się Poznać 2017</a>. Repozytorium dostępne jest w serwisie <a href="https://github.com/mejt/Krauza">GitHub</a>.
 ---
 
 W ramach konkursu *Daj się poznać* realizuję projekt *Krauza*, ostatnio pisałem, że przy okazji tworzenia tej aplikacji

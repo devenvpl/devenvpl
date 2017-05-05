@@ -31,7 +31,9 @@ layout: default
       <div class="feat related-posts">
         <h5 class="related-posts-title">{{ page.related_title }}</h5>
       </div>
-
+      {% if page.related_message %}
+        <p>{{ page.related_message }}</p>
+      {% endif %}
       <ul class="related-posts-list">
         {% for post in site.posts %}
           {% if post.tags contains page.related_tag %}
