@@ -56,14 +56,14 @@ class MutationType extends ObjectType
 ~~~
 W 10 linii zadeklarowano mutację `createBox`, która będzie tworzyć nowy element w naszym systemie. 11 linia to deklaracja
 typu zapytania, który determinuje co powinno zostać zwrócone po wykonaniu zadania. Kolejna linia to deklaracja argumentów,
-których oczekujemy od klienta, w typ wypadku oczekiwana jest tylko nazwa dla nowego elementu.
+których oczekujemy od klienta, w tym wypadku oczekiwana jest tylko nazwa dla nowego elementu.
 
 W linii 18 deklarowana jest funkcja anonimowa, która odpowiada za wykonanie niezbędnych akcji i zwrócenie danych
 w formacie zgodnym z typem.
 
 Funkcja anonima *resolve* obsługuje 3 parametry:
 * `$rootValue` - wartość, która może zostać przekazana od samego korzenia grafu (w momencie deklarowania schematu API).
-* `$args` - argumenty przekazane przez klienta (zadeklarowane w 12 linii kodu).
+* `$args` - argumenty przekazane przez klienta (według schematu zadeklarowanego w 12 linii kodu).
 * `$context` - to wartość również przekazywana od samego korzenia, mogą tam być dodane takie iformacje jak zalogowany
 użytkownik. W wypadku mojej aplikacji przekazuję instancję DIC ([Dependency Injection Container](https://pimple.sensiolabs.org/))
 w którym przechowuję m.in. połączenie z bazą danych. 
@@ -150,7 +150,7 @@ class CreateBox
 }
 ~~~
 
-Na powyższym listingu cała konkretne zadan ie wykonywane jest w liniach 27 i 28, reszta to obsługa błędów itp. Logika
+Na powyższym listingu konkretne zadanie wykonywane jest w liniach 27 i 28, reszta to obsługa błędów itp. Logika
 tworzenia nowego elementu i tak jest ukryta na niższych warstwach aplikacji, których teraz nie będę już tutaj przeklejać.
 Po krótce wykonywana jest walidacja danych wejściowych, następnie tworzony jest obiekt `Box` i na jego podstawie
 odbywa się zapis nowego elementu do bazy danych.
@@ -161,4 +161,38 @@ wejściowych zwrócilibyśmy kod `400`, ale przy GraphQL nie jest to takie oczyw
 błędów.
 
 Jak działa [obsługa wyjątków](/dsp2017-mateusz/2017/04/30/kruaza-obsluga-wyjatkow.html) na przykładzie tej samej akcji
-opisałem w poprzednim poście. Do klienta zwracany jest wynik po utworzeniu elementu albo `error` konkretnego typu. 
+opisałem w poprzednim poście. Warto go przejrzeć aby lepiej zrozumieć koncepcję obsługi błędów.
+
+Do klienta zwracana jest tablica według typu `CreateBoxType` zaprezentowanego wcześniej. Jeśli wszystko się powiodło to
+zwracana jest tablica, gdzie element `box` przyjmuje dane dla nowo utworzonego elementu, a `errors` jest wartością `null`.
+W przeciwnym razie (jeśli wystąpiły jakieś błędy) element `box` posiada wartość `null`, a w polu `errors` ustawiana
+jest wartość według typu `ErrorType` zaprezentowanego poniżej.
+
+~~~php
+<?php
+
+class ErrorType extends ObjectType
+{
+    public function __construct()
+    {
+        $config = [
+            'fields' => [
+                'errorType' => [
+                    'type' => Type::string(),
+                    'description' => 'The type of the error (infrastructure issue or breaking the domain contract)'
+                ],
+                'key' => [
+                    'type' => Type::string(),
+                    'description' => 'The key of the error'
+                ],
+                'message' => [
+                    'type' => Type::string(),
+                    'description' => 'The message of the error'
+                ]
+            ]
+        ];
+
+        parent::__construct($config);
+    }
+}
+~~~
