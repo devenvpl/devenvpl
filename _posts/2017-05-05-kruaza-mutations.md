@@ -1,7 +1,7 @@
 ---
 date: 2017-05-05 18:10
 title: Krauza - Zapis do bazy z obsługą GraphQL 
-description: Opis pierwszego zetknięcia z graphql i próbą jego implementacji w projekcie php
+description: Zapis do bazy z wykorzystaniem GraphQL
 tags: mksiazek dsp2017-mateusz krauza projekt php oop graphql
 category: dsp2017-mateusz
 author: mksiazek
