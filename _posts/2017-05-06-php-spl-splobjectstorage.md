@@ -165,4 +165,4 @@ Wynikiem będzie storage z 3 obiektami posiadającymi następujące właściwoś
 
 ## Przykład użycia
 
-Wiesz już co oferuje klasa *SplObjectStorage*, jednak rodzi się pytanie - gdzie można ją realnie zastosować? Ja użyłem jej przy okazji implementacji wzorca *Observer*. Wykorzystując przy tym dwie inne klasy wchodzące w skład biblioteki *SPL* - *SplObserver* oraz  *SplSubject*. Kod źródłowy tego przykładu dostępny jest na moim profilu [Github](https://github.com/adrianpietka/notes/blob/master/php-spl/spl-observer-pattern.php).
+Wiesz już co oferuje klasa *SplObjectStorage*, jednak rodzi się pytanie - gdzie można ją realnie zastosować? Ja użyłem jej przy okazji implementacji wzorca *Observer*. Wykorzystując przy tym dwie inne klasy wchodzące w skład biblioteki *SPL* - *SplObserver* oraz  *SplSubject*. Kod źródłowy tego przykładu dostępny jest na moim profilu [GitHub](https://github.com/adrianpietka/notes/blob/master/php-spl/spl-observer-pattern.php).
