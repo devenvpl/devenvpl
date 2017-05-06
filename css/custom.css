@@ -123,7 +123,8 @@ ul.posts li {
 }
 
 h2 + .highlighter-rouge,
-h3 + .highlighter-rouge { 
+h3 + .highlighter-rouge,
+h4 + .highlighter-rouge { 
     margin-top: 20px;
 }
 
