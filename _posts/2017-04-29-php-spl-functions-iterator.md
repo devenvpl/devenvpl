@@ -1,12 +1,14 @@
 ---
 date: 2017-04-29 20:00
 title: "PHP - Biblioteka SPL - Funkcje iterator_*"
-layout: post
 description: "Wprowadzenie w świat biblioteki standardowej PHP - SPL (Standard PHP Library). Omówienie funkcji iterator_*."
 tags: apietka dsp2017-adrian php spl
 category: dsp2017-adrian
 author: apietka
 comments: true
+layout: post-with-related-tag
+related_tag: "spl"
+related_title: "Zobacz inne posty związane z biblioteką standardową PHP - SPL"
 ---
 
 Kontynuując rozpoczętą serię nt. biblioteki standardowej [SPL](/dsp2017-adrian/2017/04/22/php-spl-functions.html) chciałbym przedstawić funkcje wspomagające pracę z iteratorami. Pracując na co dzień z językiem *PHP* mamy do czynienia z iteratorami. Na początek powinniśmy sobie jednak zadać proste pytanie - czym one tak na prawdę są?

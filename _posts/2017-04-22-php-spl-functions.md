@@ -1,12 +1,14 @@
 ---
 date: 2017-04-22 23:00
 title: "PHP - Biblioteka SPL - Funkcje class_* oraz spl_*"
-layout: post
 description: "Wprowadzenie w świat biblioteki standardowej PHP - SPL (Standard PHP Library). Omówienie funkcji class_* oraz spl_*."
 tags: apietka dsp2017-adrian php spl
 category: dsp2017-adrian
 author: apietka
 comments: true
+layout: post-with-related-tag
+related_tag: "spl"
+related_title: "Zobacz inne posty związane z biblioteką standardową PHP - SPL"
 ---
 
 Chciałbym aby ten artykuł był początkiem serii postów przybliżających możliwości SPL - czyli *Standard PHP Library*.
