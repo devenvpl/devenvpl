@@ -15,8 +15,7 @@ moim wypadku opartych o bibliotekę d3.js (ale to w sumie nie jest ważne co je 
 przeźroczystym tłem.
 
 Sposób może w miarę prosty, ale jeśli Twoja aplikacja musi obsługiwać IE11 i EDGE, możesz spodziewać się problemów. 
-Przypadek? Nie sądzę. Myślę, że mogłeś się tego spodziewać :smiley:. I właśnie tego głównie będzie dotyczyć ten post - 
-opisu jak się z tym uporałem.
+Przypadek? Nie sądzę. I właśnie tego głównie będzie dotyczyć ten post - opisu jak się z tym uporałem.
 
 ## Podstawowa funkcjonalność
 Jeden z [moich postów](/dsp2017-mateusz/2017/03/22/kursor-wykres-d3.html) dotyczył wykresów malowanych przy pomocy
