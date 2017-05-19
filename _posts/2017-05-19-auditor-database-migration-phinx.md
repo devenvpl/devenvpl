@@ -104,7 +104,7 @@ Migracją nazywamy zmianę struktur w których przechowywane są dane np. dodani
 $: vendor/bin/phinx create AddedPostTable
 ~~~
 
-*Phinx* wygeneruje nowy plik w folderze ```db\migrations\```. Plik z migracją zapisywany jest pod nazwą w formacie ```YYYYMMDDHHMMSS_my_new_migration.php```. Następnym krokiem jest uzupełnienie migracji o akcje które mają zostać wykonane.
+*Phinx* wygeneruje nowy plik w folderze ```db/migrations/```. Plik z migracją zapisywany jest pod nazwą w formacie ```YYYYMMDDHHMMSS_my_new_migration.php```. Następnym krokiem jest uzupełnienie migracji o akcje które mają zostać wykonane.
 
 ~~~php
 <?php
@@ -156,7 +156,7 @@ Stworzenie nowego *seed* przy użyciu narzędzia *Phinx*, wymaga wykonania nast�
 $: vendor/bin/phinx seed:create PostSeeder
 ~~~
 
-W folderze ```db\seeds\``` został utworzony plik ```PostSeeder.php```. W nim umieszczam informacje które mają zostać dodane do bazy danych - dodaję pierwszy post, nadając mu tytuł oraz przykładową treść. Interfejs narzędzia *Phinx* i w tym przypadku jest bardzo przyjemny w użyciu.
+W folderze ```db/seeds/``` został utworzony plik ```PostSeeder.php```. W nim umieszczam informacje które mają zostać dodane do bazy danych - dodaję pierwszy post, nadając mu tytuł oraz przykładową treść. Interfejs narzędzia *Phinx* i w tym przypadku jest bardzo przyjemny w użyciu.
 
 ~~~php
 <?php
@@ -188,7 +188,7 @@ Lub tylko wybranych, podając nazwy seedów w parametrze:
 $: vendor/bin/phinx seed:run -s PostSeeder -s OtherSeeder
 ~~~
 
-Po wykonaniu polecenia, tabela *post* zostnie uzupełniona o podane dane.
+Po wykonaniu polecenia, tabela *post* zostanie uzupełniona o podane dane.
 
 ![Dane w tabeli "post"]({{ site.url }}/assets/images/2017/05/phinx/post-data.png)
 
@@ -198,6 +198,6 @@ Warto dodać, że w ten sposób wszystkie zmiany struktury danych w bazie mogą 
 
 ![Struktura migracji]({{ site.url }}/assets/images/2017/05/phinx/migration-structure.png)
 
-Powyższy screen obrazuje przykładowe zastosowanie *Phinx* w projekcie który realizowaliśmy na hackathonie *CodING 2017*. Tak, nazewnictwo mogło być nieco lepsze, uschematyzowane - jednak nie to było najważniejsze. Mieliśmy założenie - nauczyć się czegoś nowego (*Phinx*) oraz dostarczyć działającą aplikację. Migracje ułatwiły nam kwestię zmian na bazie danych - nie musieliśmy komunikować za każdym razem aby rozstawić bazę danych od nowa albo dodać nową kolumnę do istniejącej już struktury. Wystarcyło aby po zaciągnięciu nowych zmian z repozytorium, uruchomić polecenie ```vendor/bin/phinx migrate```. Szybciej, łatwiej i przyjemniej.
+Powyższy screen obrazuje przykładowe zastosowanie *Phinx* w projekcie który realizowaliśmy na hackathonie *CodING 2017*. Tak, nazewnictwo mogło być nieco lepsze, uschematyzowane - jednak nie to było najważniejsze. Mieliśmy założenie - nauczyć się czegoś nowego (*Phinx*) oraz dostarczyć działającą aplikację. Migracje ułatwiły nam kwestię zmian na bazie danych - nie musieliśmy komunikować za każdym razem aby rozstawić bazę danych od nowa albo dodać nową kolumnę do istniejącej już struktury. Wystarczyło aby po zaciągnięciu nowych zmian z repozytorium, uruchomić polecenie ```vendor/bin/phinx migrate```. Szybciej, łatwiej i przyjemniej.
 
 Wpięcie narzędzia *Phinx* w projekt zajęło mi zaledwie kilka chwil. Dokumentacja jest czytelna i zwięzła, wszystko czego potrzebowałem byłem w stanie w niej odnaleźć. Prosty interfejs umożliwia realizację wszelkich niezbędnych operacji na strukturze bazy danych. Jeśli natomiast pojawi się jakiś nieobsłużony przypadek, w najgorszym razie można wywołać metodę ```execute($sql)``` przyjmującą jako argument zapytanie *SQL*. Proste narzędzie idealnie wpisujące się w projekt *Auditor*. Ciężko jest mi pisać o wadach rozwiązania, ponieważ jak na razie realizuje wszystkie moje potrzeby - jeżeli pojawią się problemy, na pewno opiszę je w ramach osobnego artykułu na blogu.
