@@ -27,7 +27,7 @@ $storage->attach($object);
 $storage->attach($object);
 ~~~
 
-Dodanie tej samej instancji obiektu nie powoduje jej duplikacji w *storage*. Jedna instancja obiektu = maksymalnie jedna instancja w *storage*.
+Dodanie tej samej instancji obiektu nie powoduje jej duplikacji w *storage*. Jedna instancja obiektu = maksymalnie jedna instancja w *storage*. *SplObjectStorage* to kolejka czyli bufor typu *FIFO* (*First In, First Out*).
 
 #### Mapowanie obiekt => dane.
 
