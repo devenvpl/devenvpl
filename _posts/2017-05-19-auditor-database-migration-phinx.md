@@ -29,7 +29,7 @@ Możliwości rozwiązania opisane zostały na [oficjalnej stronie](https://phinx
 
 - tworzenie migracji bazodanowych przy użyciu języka PHP, zapewniając tym samym niezależność od zastosowanej bazy SQL oraz możliwość wersjonowania w repozytorium kodu,
 - migracje "up" & "down",
-- ławość uruchamiania,
+- łatwość uruchamiania,
 - umożliwia zasilanie danymi początkowego stanu bazy,
 - nie musisz przejmować się aktualnym stanem bazy, *Phinx* wie jakie migracje musi uruchomić,
 - łatwość integracji z dowolną aplikacją,
@@ -148,9 +148,9 @@ Oprócz zarządzania tabelą i kolumnami, możemy m.in definiować klucze zewnę
 
 Każda struktura danych, prędzej czy później zostanie zasilona jakimiś danymi. W przypadku serwera testowego - mogą to być losowo wygenerowane dane (przy okazji polecam bibliotekę [Faker](https://github.com/fzaninotto/Faker)), jeśli mówimy o serwerze produkcyjnym - mogą to być dane niezbędne do uruchomienia aplikacji.
 
-Seed może zawierać dane dla każdego typu środowiska. To od nas zależy w jaki sposób ułożymy sobie strukturę seedów. Mi zdarzało się tworzyć seedy które musiały być zawsze (np. role użytkowników, podstawowe kategorie produktów) oraz dodatkowo takie które generowały dane testowe tylko w przypadku ich uruchomienia w środowisku testowym (np. testowe konta użytkowników z konkretnie przydzielonymi uprawnieniami). W tym przykładzie pominę jednak rozdzielanie typów seedów.
+*Seed* (będę używał angielskiego nazewnictwa, nie potrafię go przełożyć na język polski w sposób mnie zadawalający) może zawierać dane dla każdego typu środowiska. To od nas zależy w jaki sposób ułożymy sobie strukturę dla *seeds*. Mi zdarzało się tworzyć *seeds* które musiały wykonać się zawsze dla nowej instancji bazy danych (np. role użytkowników, podstawowe kategorie produktów) oraz dodatkowo takie które generowały dane testowe tylko w przypadku ich uruchomienia w środowisku testowym (np. testowe konta użytkowników z konkretnie przydzielonymi uprawnieniami). W tym przykładzie pominę jednak rozdzielanie typów *seeds*.
 
-Stworzenie nowego seeda przy użyciu narzędzia *Phinx*, wymaga wykonania następującego polecenia:
+Stworzenie nowego *seed* przy użyciu narzędzia *Phinx*, wymaga wykonania następującego polecenia:
 
 ~~~
 $: vendor/bin/phinx seed:create PostSeeder
