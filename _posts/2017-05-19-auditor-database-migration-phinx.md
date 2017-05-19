@@ -11,13 +11,13 @@ comments: true
 
 Czy wyobrażasz sobie rozwijanie projektu bez repozytorium kodu? Ja *teoretycznie tak* - na początku swojej kariery zawodowej, przez pierwsze miesiące nie używaliśmy żadnego sposobu na wersjonowanie kodu. Najbardziej aktualna wersja znajdowała się na serwerze produkcyjnym (a przynajmniej miała się znajdować). Wszystko trwało do czasu (kwestia miesiąca, dwóch - nie pamiętam dokładnie), aż totalnie unieruchomiliśmy jeden z kluczowych projektów w firmie :) Historia smutna, jednak prawdziwa.
 
-Po ponad 9 latach od tego wydarzenia, repozytorium kodu jest *must have* i tak na prawdę jest to jedna z pierwszych rzeczy które towarzyszą przy uruchamianiu nowego projektu. Dlaczego więc ciągle po macoszemu traktujemy strukturę bazy danych? Przecież to również kod, mocno związany z naszą aplikacją. Nie zawsze *code first* jest wystarczający - czasem trzeba wygenerować bardzo specyficzne widoki. Dlaczego jedynie co widzę w repozytoriach to *dump.sql*? Czy jedna zmiana - dodanie kolumny do tabeli - musi pociągać za sobą ```drop database``` aby zaimportować na nowo *dump.sql*? Oczywiście, że nie! Są na to lepsze sposoby.
+Po ponad 9 latach od tego wydarzenia, repozytorium kodu jest ciąge *must have*. Tak na prawdę jest to jedna z pierwszych rzeczy które towarzyszą każdemu z nas przy uruchamianiu nowego projektu. Dlaczego więc ciągle po macoszemu traktujemy strukturę bazy danych? Przecież to również kod, mocno związany z naszą aplikacją. Nie zawsze *code first* jest wystarczający - czasem trzeba wygenerować bardzo specyficzne widoki. Dlaczego jedynie co widzę w repozytoriach to *dump.sql*? Czy jedna zmiana - np. dodanie kolumny do tabeli - musi pociągać za sobą ```drop database``` aby zaimportować na nowo *dump.sql*? Oczywiście, że nie! Są na to lepsze sposoby.
 
 > If you deploy version 2.0 of your application against version 1.0 of your database, what do you get? A broken application, that's what. That's why your database should always be under source control, right next to your application code. You deploy the app, and you deploy the database. Like peanut butter and chocolate, they are two great tastes that taste great together.
 >
 > -- [*Jeff Atwood*, blog.codinghorror.com](https://blog.codinghorror.com/get-your-database-under-version-control/)
 
-Sposobów na realizację wersjonowania bazy danych jest kilka (oczywiście pomijając sposób najbardziej popularny - dupny plik z dumpem aktualnej bazy ;)). Możemy wykorzystać prosty mechanizm który będzie odtwarzał jej stan na podstawie kolekcji plików SQL (```01_2017-05-18_12-50_createUserTabel.sql```) lub też używając rozbudowanych narzędzi np. [Liquibase](http://www.liquibase.org/). W tym wszystkim chciałbym podkreślić jedną rzecz - ważne jest rozwiązanie problemu niż wybór konkretnego narzędzia. *Liquibase* jest świetny, ale w przypadku projektu *Auditor*, aż nadmiarowy. Dodatkowo wymaga *Javy*, czyli kolejnej zależności która musi zostać spełniona na serwerze uruchomieniowym. Zdecydowałem się na wybranie innego rozwiązania...
+Sposobów na realizację wersjonowania bazy danych jest kilka (oczywiście pomijając sposób najbardziej popularny - dupny plik z dumpem aktualnej bazy ;)). Możemy wykorzystać prosty mechanizm który będzie odtwarzał jej stan na podstawie kolekcji plików SQL (np. w formacie ```01_2017-05-18_12-50_createUserTabel.sql```) lub też używając rozbudowanych narzędzi - [Liquibase](http://www.liquibase.org/). W tym wszystkim chciałbym podkreślić jedną rzecz - ważne jest rozwiązanie problemu niż wybór konkretnego narzędzia. *Liquibase* jest świetny, ale w przypadku projektu *Auditor*, aż nadmiarowy. Dodatkowo wymaga *Javy*, czyli kolejnej zależności która musi zostać spełniona na serwerze uruchomieniowym. Zdecydowałem się na wybranie innego rozwiązania...
 
 ## Phinx
 
@@ -60,25 +60,24 @@ Polecenie inicjalizacji *Phinx* utworzy plik ```phinx.yml``` w którym zdefinowa
 
 ~~~yml
 paths:
-    migrations: %%PHINX_CONFIG_DIR%%/db/migrations
-    seeds: %%PHINX_CONFIG_DIR%%/db/seeds
+  migrations: %%PHINX_CONFIG_DIR%%/db/migrations
+  seeds: %%PHINX_CONFIG_DIR%%/db/seeds
 
 environments:
-    default_migration_table: phinxlog
-    default_database: development
-    production:
-        adapter: mysql
-        host: localhost
-        name: production_db
-        user: root
-        pass: ''
-        port: 3306
-        charset: utf8
+  default_migration_table: phinxlog
+  default_database: development
+  production:
+    adapter: mysql
+    host: localhost
+    name: production_db
+    user: root
+    pass: ''
+    port: 3306
+    charset: utf8
 
-    development:
+  development:
     
-        
-    testing:
+  testing:
 
 version_order: creation
 ~~~
