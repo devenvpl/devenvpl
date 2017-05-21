@@ -13,14 +13,15 @@ related_message: Projekt <i>Krauza</i> realizowany jest w ramach konkursu <a hre
 ---
 
 Od dwóch tygodni nie pojawił się żaden post związany z projektem *Krauza*. Na ten stan rzeczy składają się dwa powody:
-w ostatnim czasie w projekcie nie działo się nic nadzwyczajnego i odkrywczego, skupiłem się na dokończeniu komunikacji
-z bazą danych i API, jedyną ciekawą rzeczą, która pojawiła się w projekcie są migracje bazodanowe z wykorzystaniem
-narzędzia [Phinx](https://phinx.org/), jednak @adrianpietka już rozpisał się na ten temat więc zapraszam do jego
-[posta](/dsp2017-adrian/2017/05/19/auditor-database-migration-phinx.html).
+tydzień temu brałem udział w międzynarodowym hackathonie organizowanym przez bank ING ([24hCodING](https://24hcoding.com/)),
+po którym potrzebowałem trochę czasu na regenerację, a poza tym w ostatnim czasie w projekcie nie działo się nic
+nadzwyczajnego i odkrywczego. Skupiłem się na dokończeniu komunikacji z bazą danych i API, jedyną ciekawą rzeczą,
+która pojawiła się w projekcie są migracje bazodanowe z wykorzystaniem narzędzia [Phinx](https://phinx.org/), jednak
+@adrianpietka już rozpisał się na ten temat więc zapraszam do jego [posta](/dsp2017-adrian/2017/05/19/auditor-database-migration-phinx.html).
 
 Po uprzątnięciu warstwy backendowej przyszła pora na frontend i to dzisiaj chciałbym opisać, bo wspominałem już wcześniej,
 że chciałbym na front wrzucić najnowszego Angulara żeby poznać coś świeżego i nowego. Na razie ta część projektu jest
-na bardzo podstawowym poziomie, jednak jest już co opisać :smiley:. Już kiedyś pisałem posta z 
+na bardzo podstawowym poziomie, jednak jest już co opisać :smiley:. Już kiedyś pojawił się tutaj post z 
 [podstawowymi informacjami](/dsp2017-mateusz/2017/03/14/angular.html) o tym frameworku świeżo po szkoleniu,
 ale dopiero teraz mogę zacząć pisać konkrety na przykładzie prawdziwego użycia w projekcie.
 
@@ -111,7 +112,7 @@ dwa pliki w formacie *TypeScript* komponentu i testów. Na tę chwilę wystarczy
 w miarę potrzeb dodać jakieś style. Teraz aby nasze komponenty zostały wyświetlone w odpowiednim miejscu na stronie trzeba
 je dodać do pliku html głównego komponentu aplikacji (`src/app/app.component.html`).
 
-~~~angular2html
+~~~html
 <app-header></app-header>
 <app-footer></app-footer>
 ~~~
@@ -124,7 +125,7 @@ jako podkomponent komponentu *header*.
 $ ng generate component navigation
 ~~~
 
-Plik html trzeba wypełnić jakimiś odnośnikami...
+Plik html (`src/app/header/navigation/navigation.component.html`) wypełniamy odnośnikami do podstron...
 ~~~html
 <div class="collapse navbar-collapse">
   <ul class="nav navbar-nav navbar-right">
@@ -134,8 +135,8 @@ Plik html trzeba wypełnić jakimiś odnośnikami...
 </div>
 ~~~
 
-Teraz trzeba dodać routing. Otwieramy główny plik modułu (`src/app/app.module.ts`) i tam trzeba zadeklarować odpowiednie
-ścieżki. Poniżej wklejam kod, który trzeba dodać oprócz tego, który już tam istnieje.
+Następnym krokiem jest routing, otwieramy główny plik modułu (`src/app/app.module.ts`) i tam trzeba zadeklarować odpowiednie
+ścieżki. Poniżej wklejam kod, który należy dodać oprócz tego, który już tam istnieje.
 ~~~typescript
 import { RouterModule, Routes } from '@angular/router';
 
@@ -152,4 +153,26 @@ const appRoutes: Routes = [
 })
 ~~~
 
+Wypadałoby jeszcze wyznaczyć miejsce, gdzie poszczególne strony powinny się wyświetlać. Do pliku HTML, należy wrzucić 
+`<router-outlet></router-outlet>`, czyli w wypadku poprzedniego przykładu z headerem i footerem, może wyglądać to następująco.
+~~~html
+<app-header></app-header>
+<router-outlet></router-outlet>
+<app-footer></app-footer>
+~~~
+
+##### Uzupłenienie brakujących komponentów
+Dodaliśmy trzy odnośniki do komponentów, które jeszcze nie istnieją, więc wypadałoby je utworzyć.
+~~~
+$ ng generate component HomePage
+$ ng generate component Boxes
+$ ng generate component PageNotFound
+~~~
+
+Teraz można zobaczyć stronę w przeglądarce i przechodzić między stroną Home i Boxes. Kiedy w adresie pojawi się nieznany
+URL to zostanie wyświetlona strona PageNotFound.
+
 ## Podsumowanie
+Rozstawienie projektu z Agularem jest ekspresowe i przyjemne, na razie jestem bardzo zadowolony. Jestem ciekaw jak potoczy
+się dalsza praca z tym frameworkiem. Obawiam się trochę zbyt dużych przywiązań i przyzwyczajeń do 1 wersji, jednak zobaczymy.
+Mam nadzieję, że będę mógł jeszcze napisać posta równie entuzjastycznego po dłuższej pracy z Angularem :smiley:
