@@ -46,14 +46,15 @@ bardzo podstawowe operacje.
 Nie udało mi się nigdzie opublikować tego projektu chociaż miałem takie zamiary. Zaniechałem to jednak bo uznałem, że lepiej
 to zrobić kiedy aplikacja będzie "w lepszej kondycji".
 
-Na pewno chciałbym kontynuwać prace nad tym projektem i dociągnąc go do końca bo nie chciałbym zmarnować poświęconego czasu,
-a czuję, że może wyjśc z tego coś całkiem ciekawego.
+Na pewno chciałbym kontynuwać prace nad tym projektem i dociągnąć go do końca bo nie chciałbym zmarnować poświęconego czasu,
+a czuję, że może wyjśc z tego coś całkiem ciekawego, a przy okazji poducze się nowych rzeczy, których w codziennej
+pracy trochę brakuje.
 
 Więcej informacji o projekcie dostępnych jest pod tagiem [#krauza](/tag/krauza.html), a repozytorium dostępne jest w
 serwisie [GitHub](https://github.com/mejt/Krauza).
 
 ## Co dalej?
-Blog powstał na szybko bez większego nakładu pracy aby jakoś wyglądał, na początek najważniejsze było sprawdzenie czy
+Blog powstał na szybko bez większego nakładu pracy na aspekty wizualne, na początek najważniejsze było sprawdzenie czy
 się do tego nadaję. Trzeba było najpiew konkretnego contentu, aby zweryfikować czy jest sens bardziej się angażować
 w całą otoczkę, jednak jak widać, jest potencjał w tym aby zostać z blogowaniem na dłużej. W najbliższym czasie chciałbym
 aby ten blog stał się trochę ładniejszy. Zastanawiam się również nad podstawowym atakiem social media, czyli założeniem
