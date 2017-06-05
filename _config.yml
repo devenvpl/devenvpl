@@ -17,6 +17,10 @@ authors:
     display_name: Mateusz Książek
     github: mejt
     email: ksiazek.mate@gmail.com
+  dwrzesien:
+      display_name: Dariusz Wrzesień
+      github: dariuszwrzesien
+      email: dariuszwrzesien@gmail.com
 gems:
   - jekyll-feed
   - jekyll-mentions
