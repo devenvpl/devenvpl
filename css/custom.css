@@ -149,3 +149,8 @@ section#single-wrap .related-posts-title {
 section#single-wrap ul.related-posts-list li {
     margin-bottom: 8px;
 }
+
+body section#single-wrap img.img-auto {
+    width: auto;
+    height: auto;
+}
