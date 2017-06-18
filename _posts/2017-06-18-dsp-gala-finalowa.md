@@ -20,17 +20,17 @@ zająłem 11 miejsce** (!!!!1111oneoneone) i chciałbym serdecznie podziękować
 Oprócz tego była to "konferencja dla początkujących", czyli dla osób, które pierwszy raz chciały stanąć przed publicznością
 i opowiedzieć o czymś. Świetna inicjatywa i bardzo dobra możliwość aby spróbować swoich sił jako speaker. Gratuluję
 wszystkim którzy odważyli się  stanąć przy mównicy i zaprezentować swój temat. Po niektórych możnabyło zauważyć zdenerowanie,
-co jest całkowicie zrozumiałe. Niektórzy jednak zaprezentowali się tak dobrze, że trudno było uwierzyć, że to ich debiut.
+co jest całkowicie zrozumiałe. Inni natomiast zaprezentowali się tak dobrze, że trudno było uwierzyć, że to ich debiut.
 
 Zagadnienia poruszane w prezentacjach były bardzo różne, począwszy od mocno technicznych kończąc na kompetencjach miękkich.
-Trudno się jednak dziwić bo jak dobrać dobrą tematykę do tak zróżnicowanej publiki? :smiley: Myślę, że tym razem nie było
-głównym celem prelegentów znalezienie odpowiedniego tematu aby dogodzić wszystkim, a rolą publiczności było pozostać wyrozumiałym.
+Trudno się jednak dziwić bo jak dobrać dobrą tematykę do tak zróżnicowanej publiki? :smiley: Myślę, że tym razem głównym
+celem prelegentów nie było znalezienie odpowiedniego tematu aby dogodzić wszystkim, a rolą publiczności było pozostać wyrozumiałym.
 Osoby, które chciały sprawdzić swoich sił jako speakerzy po prostu zaprezentowały światu to w czym czują się najlepiej i
 co ich interesuje.
 
-Mimo, że poruszane tematy omawiały w głównej części podstawy to fajnie było zobaczyć zaangażowanie niektórych młodych,
-jeszcze początkujących programistów. Osobiście też poczułem się zainspirowany niektórymi tematami i chciałbym w najbliższym
-czasie coś o tym napisać (może będzie kontrowersyjnie, ale przynajmniej podyskutujemy :wink:).
+Mimo, że poruszane tematy omawiały w głównej części podstawy to fajnie było zobaczyć zaangażowanie początkujących programistów.
+Osobiście też poczułem się zainspirowany niektórymi tematami i chciałbym w najbliższym czasie coś o tym napisać (może
+będzie kontrowersyjnie, ale przynajmniej podyskutujemy :wink:).
 
 ![DSP](/assets/images/2017/06/dsp/3.jpg)
 
